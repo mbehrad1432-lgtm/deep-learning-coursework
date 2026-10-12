@@ -1,0 +1,10 @@
+# Dependency inventory; NOT a tested lockfile.
+torch
+numpy
+pandas
+matplotlib
+nltk
+datasets
+scikit-learn
+tqdm
+jupyterlab

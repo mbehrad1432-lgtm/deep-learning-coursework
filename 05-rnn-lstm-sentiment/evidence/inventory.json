@@ -1,0 +1,31 @@
+{
+  "folder": "05-rnn-lstm-sentiment",
+  "title": "RNN and LSTM Sentiment Classification",
+  "source": "RNNImplementation.ipynb",
+  "source_sha256": "0e1bead877a9e49e079078eb588ac81b46605662220505704373d30d07446ab0",
+  "code_cells": 33,
+  "saved_errors": [],
+  "nonempty_code_without_execution_count": [],
+  "imports": [
+    "from IPython.display import display, HTML",
+    "from collections import Counter",
+    "from datasets import load_dataset",
+    "from nltk import wordpunct_tokenize",
+    "from nltk.corpus import stopwords",
+    "from sklearn.metrics import classification_report",
+    "from torch import optim",
+    "from torch.utils.data import DataLoader",
+    "from tqdm import tqdm",
+    "import matplotlib.pyplot as plt",
+    "import nltk",
+    "import numpy as np",
+    "import os",
+    "import pandas as pd",
+    "import random",
+    "import re",
+    "import torch",
+    "import torch.nn as nn",
+    "import torch.nn.functional as F"
+  ],
+  "review_mode": "static; no cells executed"
+}

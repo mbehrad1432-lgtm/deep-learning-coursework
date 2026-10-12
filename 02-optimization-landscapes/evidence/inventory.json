@@ -1,0 +1,17 @@
+{
+  "folder": "02-optimization-landscapes",
+  "title": "Optimization on Ackley and Beale",
+  "source": "3-OPTM.ipynb",
+  "source_sha256": "60b165455f8f20c2421b7cf1e3fd39fe4f479b9ec2089169ca5275eb7d922209",
+  "code_cells": 24,
+  "saved_errors": [],
+  "nonempty_code_without_execution_count": [],
+  "imports": [
+    "from IPython import display",
+    "from mpl_toolkits.mplot3d import Axes3D",
+    "import matplotlib.pyplot as plt",
+    "import numpy as np",
+    "import torch"
+  ],
+  "review_mode": "static; no cells executed"
+}

@@ -1,0 +1,20 @@
+{
+  "folder": "01-numpy-neural-network",
+  "title": "NumPy Regression Neural Network",
+  "source": "2-NN_Scratch.ipynb",
+  "source_sha256": "97b4609e35412b8e26457a95bb599de53d9deaa16b7f2f345c32b90228550114",
+  "code_cells": 25,
+  "saved_errors": [],
+  "nonempty_code_without_execution_count": [],
+  "imports": [
+    "from builtins import range",
+    "from sklearn.datasets import fetch_california_housing",
+    "from utils.data import get_california_housing_data, get_california_housing_normalized__data",
+    "from utils.gradient_check import eval_numerical_gradient, eval_numerical_gradient_array",
+    "from utils.solver import *",
+    "import matplotlib.pyplot as plt",
+    "import numpy as np",
+    "import pandas as pd"
+  ],
+  "review_mode": "static; no cells executed"
+}

@@ -1,0 +1,132 @@
+[
+  {
+    "cell": 3,
+    "output": 0,
+    "text": "WARNING: Ignoring invalid distribution ~andas (c:\\Users\\psp\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages)\nWARNING: Ignoring invalid distribution ~andas (c:\\Users\\psp\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages)\nWARNING: Ignoring invalid distribution ~andas (c:\\Users\\psp\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages)\n"
+  },
+  {
+    "cell": 4,
+    "output": 0,
+    "text": "Using device: cuda\n"
+  },
+  {
+    "cell": 6,
+    "output": 0,
+    "text": "Number of chunks: 34\nFirst chunk length: 100\n"
+  },
+  {
+    "cell": 7,
+    "output": 0,
+    "text": "Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\nc:\\Users\\psp\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\huggingface_hub\\file_download.py:137: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\\Users\\psp\\.cache\\huggingface\\hub\\datasets--rajpurkar--squad. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.\nTo support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development\n  warnings.warn(message)\nGenerating train split: 100%|██████████| 87599/87599 [00:00<00:00, 651751.05 examples/s]\nGenerating validation split: 100%|██████████| 10570/10570 [00:00<00:00, 660554.76 examples/s]"
+  },
+  {
+    "cell": 7,
+    "output": 1,
+    "text": "Dataset({\n    features: ['id', 'title', 'context', 'question', 'answers'],\n    num_rows: 300\n})\nExample row:\n{'id': '56be4db0acb8001400a502ec', 'title': 'Super_Bowl_50', 'context': 'Super Bowl 50 was an American football game to determine the champion of the National Football League (NFL) for the 2015 season. The American Football Conference (AFC) champion Denver Broncos defeated the National Football Conference (NFC) champion Carolina Panthers 24–10 to earn their third Super Bowl title. The game was played on February 7, 2016, at Levi\\'s Stadium in the San Francisco Bay Area at Santa Clara, California. As this was the 50th Super Bowl, the league emphasized the \"golden anniversary\" with various gold-themed initiatives, as well as temporarily suspending the tradition of naming each Super Bowl game with Roman numerals (under which the game would have been known as \"Super Bowl L\"), so that the logo could prominently feature the Arabic numerals 50.', 'question': 'Which NFL team represented the AFC at Super Bowl 50?', 'answers': {'text': ['Denver Broncos', 'Denver Broncos', 'Denver Broncos'], 'answer_start': [177, 177, 177]}}\n\nNumber of unique contexts: 15\nNumber of chunks: 32\nFirst chunk length: 500\n\nFirst chunk preview:\nSuper Bowl 50 was an American football game to determine the champion of the National Football League (NFL) for the 2015 season. The American Football Conference (AFC) champion Denver Broncos defeated the National Football Conference (NFC) champion Carolina Panthers 24–10 to earn their third Super Bowl title. The game was played on February 7, 2016, at Levi's Stadium in the San Francisco Bay Area at Santa Clara, California. As this was the 50th Super Bowl, the league emphasized the \"golden anniv\n"
+  },
+  {
+    "cell": 7,
+    "output": 2,
+    "text": "\n"
+  },
+  {
+    "cell": 9,
+    "output": 0,
+    "text": "c:\\Users\\psp\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\huggingface_hub\\file_download.py:137: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\\Users\\psp\\.cache\\huggingface\\hub\\models--sentence-transformers--all-MiniLM-L6-v2. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.\nTo support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development\n  warnings.warn(message)\nLoading weights: 100%|██████████| 103/103 [00:00<00:00, 12874.78it/s]\nBatches: 100%|██████████| 1/1 [00:00<00:00,  3.97it/s]"
+  },
+  {
+    "cell": 9,
+    "output": 1,
+    "text": "Embedding model: sentence-transformers/all-MiniLM-L6-v2\nEmbeddings shape: (32, 384)\nEmbeddings dtype: float32\n"
+  },
+  {
+    "cell": 9,
+    "output": 2,
+    "text": "\n"
+  },
+  {
+    "cell": 10,
+    "output": 0,
+    "text": "FAISS index contains 32 vectors.\nEmbedding dimension: 384\n"
+  },
+  {
+    "cell": 12,
+    "output": 0,
+    "text": "Question: Which NFL team represented the AFC at Super Bowl 50?\nGold answer: Denver Broncos\n\nTop retrieved chunks:\n\nDistance 0.6448:\nSuper Bowl 50 was an American football game to determine the champion of the National Football League (NFL) for the 2015 season. The American Football Conference (AFC) champion Denver Broncos defeated the National Football Conference (NFC) champion Carolina Panthers 24–10 to earn their third Super Bowl title. The game was played on February 7, 2016, at Levi's Stadium in the San Francisco Bay Area at Santa Clara, California. As this was the 50th Super Bowl, the league emphasized the \"golden anniv\n\nDistance 0.7997:\ne to defend their title from Super Bowl XLIX by defeating them 20–18 in the AFC Championship Game. They joined the Patriots, Dallas Cowboys, and Pittsburgh Steelers as one of four teams that have made eight appearances in the Super Bowl.\n\nDistance 0.8009:\nThe Panthers finished the regular season with a 15–1 record, and quarterback Cam Newton was named the NFL Most Valuable Player (MVP). They defeated the Arizona Cardinals 49–15 in the NFC Championship Game and advanced to their second Super Bowl appearance since the franchise was founded in 1995. The Broncos finished the regular season with a 12–4 record, and denied the New England Patriots a chance to defend their title from Super Bowl XLIX by defeating them 20–18 in the AFC Championship Game. T\n"
+  },
+  {
+    "cell": 14,
+    "output": 0,
+    "text": "c:\\Users\\psp\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\huggingface_hub\\file_download.py:137: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\\Users\\psp\\.cache\\huggingface\\hub\\models--gpt2. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.\nTo support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development\n  warnings.warn(message)\nLoading weights: 100%|██████████| 148/148 [00:00<00:00, 10572.19it/s]\n"
+  },
+  {
+    "cell": 15,
+    "output": 0,
+    "text": "[transformers] The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.\n"
+  },
+  {
+    "cell": 15,
+    "output": 1,
+    "text": "Question: Which NFL team represented the AFC at Super Bowl 50?\nGold answer: Denver Broncos\nGPT-2 answer: The New England Patriots.\n\nThe New England Patriots were the first team to win the Super Bowl in Super Bowl 50. The Patriots were the first team to win the Super Bowl in Super Bowl XLIX. The Patriots were the first team to win the Super Bowl in Super Bowl XLIX.\n\nThe New England Patriots were the first team to win the Super Bowl in Super Bowl XLIX.\n"
+  },
+  {
+    "cell": 17,
+    "output": 0,
+    "text": "Question: Which NFL team represented the AFC at Super Bowl 50?\nGold answer: Denver Broncos\n\nRetrieved chunks:\n- Super Bowl 50 was an American football game to determine the champion of the National Football League (NFL) for the 2015 season. The American Football Conference (AFC) champion Denver Broncos defeated the National Football Conference (NFC) champion C ...\n- e to defend their title from Super Bowl XLIX by defeating them 20–18 in the AFC Championship Game. They joined the Patriots, Dallas Cowboys, and Pittsburgh Steelers as one of four teams that have made eight appearances in the Super Bowl. ...\n- The Panthers finished the regular season with a 15–1 record, and quarterback Cam Newton was named the NFL Most Valuable Player (MVP). They defeated the Arizona Cardinals 49–15 in the NFC Championship Game and advanced to their second Super Bowl appea ...\n\nGenerated answer: The New England Patriots.\n\nThe New England Patriots were the first team to win the Super Bowl in Super Bowl 50. The Patriots were the first team to win the Super Bowl in Super Bowl XLIX. The Patriots were the first team to win the Super Bowl in Super Bowl XLIX.\n\nThe New England Patriots were the first team to win the Super Bowl in Super Bowl XLIX.\n"
+  },
+  {
+    "cell": 19,
+    "output": 0,
+    "text": "Q: Which NFL team represented the AFC at Super Bowl 50?\nA: The New England Patriots.\n\nThe New England Patriots were the first team to win the Super Bowl in Super Bowl 50. The Patriots were the first team to win the Super Bowl in Super Bowl XLIX. The Patriots were the first team to win the Super Bowl in Super Bowl XLIX.\n\nThe New England Patriots were the first team to win the Super Bowl in Super Bowl XLIX.\n\nQ: Which team represented the NFC in that game?\nA: The Carolina Panthers.\n\nThe Carolina Panthers were the first team to win the Super Bowl in the NFL since the New York Giants in 2001. The Panthers won the Super Bowl in the first Super Bowl in franchise history, beating the New England Patriots in the Super Bowl XLIX. The Panthers won the Super Bowl in the first Super Bowl in franchise history, beating the New York Giants in the Super Bowl\n\n"
+  },
+  {
+    "cell": 21,
+    "output": 0,
+    "text": "C:\\Users\\psp\\AppData\\Local\\Temp\\ipykernel_14696\\3790890444.py:2: DeprecationWarning: `langchain-community` is being sunset and is no longer actively maintained. See https://github.com/langchain-ai/langchain-community/issues/674 for details and migration guidance toward standalone integration packages.\n  from langchain_community.vectorstores import FAISS as LangChainFAISS\nLoading weights: 100%|██████████| 103/103 [00:00<00:00, 17170.64it/s]\n"
+  },
+  {
+    "cell": 21,
+    "output": 1,
+    "text": "LangChain documents: 32\nVectorstore ready.\nSample retrieved document:\nSuper Bowl 50 was an American football game to determine the champion of the National Football League (NFL) for the 2015 season. The American Football Conference (AFC) champion Denver Broncos defeated the National Football Conference (NFC) champion Carolina Panthers 24–10 to earn their third Super Bowl title. The game was played on February 7, 2016, at Levi's Stadium in the San Francisco Bay Area at Santa Clara, California. As this was the 50th Super Bowl, the league emphasized the \"golden anniv\n"
+  },
+  {
+    "cell": 22,
+    "output": 0,
+    "text": "c:\\Users\\psp\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\huggingface_hub\\file_download.py:137: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\\Users\\psp\\.cache\\huggingface\\hub\\models--google--flan-t5-small. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.\nTo support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development\n  warnings.warn(message)\nLoading weights: 100%|██████████| 190/190 [00:00<00:00, 9048.79it/s]\n[transformers] The tied weights mapping and config for this model specifies to tie shared.weight to lm_head.weight, but both are present in the checkpoints with different values, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning.\n"
+  },
+  {
+    "cell": 22,
+    "output": 1,
+    "text": "Saint-Étienne\n"
+  },
+  {
+    "cell": 24,
+    "output": 0,
+    "text": "Conversational RAG chain is ready.\n"
+  },
+  {
+    "cell": 25,
+    "output": 0,
+    "text": "Question 1: What was Super Bowl 50?\nStandalone question 1: What was Super Bowl 50?\nAnswer 1: game to determine the champion of the National Football League (NFL) for the 2015 season\n\nQuestion 2: Where was it played?\nStandalone question 2: Where was Super Bowl 50 played?\nAnswer 2: Levi's Stadium\n\nRetrieved context for turn 2:\nSuper Bowl 50 was an American football game to determine the champion of the National Football League (NFL) for the 2015 season. The American Football Conference (AFC) champion Denver Broncos defeated the National Football Conference (NFC) champion Carolina Panthers 24–10 to earn their third Super Bowl title. The game was played on February 7, 2016, at Levi's Stadium in the San Francisco Bay Area at Santa Clara, California. As this was the 50th Super Bowl, the league emphasized the \"golden anniv\n\nOn May 21, 2013, NFL owners at their spring meetings in Boston voted and awarded the game to Levi's Stadium. The $1.2 billion stadium opened in 2014. It is the first Super Bowl held in the San Francisco Bay Area since Super Bowl XIX in 1985, and the first in California since Super Bowl XXXVII took place in San Diego in 2003.\n\nat Santa Clara, California. As this was the 50th Super Bowl, the league emphasized the \"golden anniversary\" with various gold-themed initiatives, as well as temporarily s ...\n"
+  },
+  {
+    "cell": 26,
+    "output": 0,
+    "text": "User: Which NFL team represented the AFC at Super Bowl 50?\nStandalone: Which NFL team represented the AFC at Super Bowl 50?\nAssistant: Denver Broncos\n\nUser: Which team represented the NFC in that game?\nStandalone: Which team represented the NFC in Super Bowl 50?\nAssistant: Denver Broncos\n"
+  },
+  {
+    "cell": 29,
+    "output": 0,
+    "text": "Question: Which NFL team represented the AFC at Super Bowl 50?\nGold answer: Denver Broncos\n\nRetrieved context:\n Super Bowl 50 was an American football game to determine the champion of the National Football League (NFL) for the 2015 season. The American Football Conference (AFC) champion Denver Broncos defeated the National Football Conference (NFC) champion Carolina Panthers 24–10 to earn their third Super Bowl title. The game was played on February 7, 2016, at Levi's Stadium in the San Francisco Bay Area at Santa Clara, California. As this was the 50th Super Bowl, the league emphasized the \"golden anniv\n\ne to defend their title from Super Bowl XLIX by defeating them 20–18 in the AFC Championship Game. They joined the Patriots, Dallas Cowboys, and Pittsburgh Steelers as one of four teams that have made eight appearances in the Super Bowl.\n\nThe Panthers finished the regular season with a 15–1 record, and quarterback Cam Newton was named the NFL Most Valuable Player (MVP). They defeated the Arizona Cardinals 49–15 in the NFC Championship Game and advanced to their second Super Bowl appearance sin ...\n\nT5 answer: Denver Broncos\n"
+  },
+  {
+    "cell": 30,
+    "output": 0,
+    "text": "                                            Question        Gold Answer  \\\n0  Which NFL team represented the AFC at Super Bo...     Denver Broncos   \n1  Which NFL team represented the NFC at Super Bo...  Carolina Panthers   \n\n                                    GPT-2 RAG Answer   T5 RAG Answer  \\\n0  The New England Patriots.\\n\\nThe New England P...  Denver Broncos   \n1  The New England Patriots.\\n\\nThe New England P...  Denver Broncos   \n\n                           Retrieved Context Preview  \n0  Super Bowl 50 was an American football game to...  \n1  Super Bowl 50 was an American football game to...  "
+  },
+  {
+    "cell": 30,
+    "output": 1,
+    "text": "====================================================================================================\nQuestion: Which NFL team represented the AFC at Super Bowl 50?\nGold answer: Denver Broncos\n\nGPT-2 RAG Answer:\nThe New England Patriots.\n\nThe New England Patriots were the first team to win the Super Bowl in Super Bowl 50. The Patriots were the first team to win the Super Bowl in Super Bowl XLIX. The Patriots were the first team to win the Super Bowl in Super Bowl XLIX.\n\nThe New England Patriots were the first team to win the Super Bowl in Super Bowl XLIX.\n\nT5 Encoder-Decoder RAG Answer:\nDenver Broncos\n\nRetrieved Context Preview:\nSuper Bowl 50 was an American football game to determine the champion of the National Football League (NFL) for the 2015 season. The American Football Conference (AFC) champion Denver Broncos defeated the National Football Conference (NFC) champion Carolina Panthers 24–10 to earn their third Super Bowl title. The game was played on February 7, 2016, at Levi's Stadium in the San Francisco Bay Area at Santa Clara, California. As this was the 50th Super Bowl, the league emphasized the \"golden anniv ...\n====================================================================================================\nQuestion: Which NFL team represented the NFC at Super Bowl 50?\nGold answer: Carolina Panthers\n\nGPT-2 RAG Answer:\nThe New England Patriots.\n\nThe New England Patriots were the first team to win the Super Bowl in Super Bowl 50. The Patriots won the Super Bowl in Super Bowl XLIX, and the Patriots won the Super Bowl in Super Bowl XLIX. The Patriots won the Super Bowl in Super Bowl XLIX, and the Patriots won the Super Bowl in Super Bowl XLIX. The Patriots won the Super\n\nT5 Encoder-Decoder RAG Answer:\nDenver Broncos\n\nRetrieved Context Preview:\nSuper Bowl 50 was an American football game to determine the champion of the National Football League (NFL) for the 2015 season. The American Football Conference (AFC) champion Denver Broncos defeated the National Football Conference (NFC) champion Carolina Panthers 24–10 to earn their third Super Bowl title. The game was played on February 7, 2016, at Levi's Stadium in the San Francisco Bay Area at Santa Clara, California. As this was the 50th Super Bowl, the league emphasized the \"golden anniv ...\n"
+  }
+]

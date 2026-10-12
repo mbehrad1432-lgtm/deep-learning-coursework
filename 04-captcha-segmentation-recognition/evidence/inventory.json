@@ -1,0 +1,23 @@
+{
+  "folder": "04-captcha-segmentation-recognition",
+  "title": "Synthetic CAPTCHA Segmentation and Recognition",
+  "source": "CAPTCHASegmantation.ipynb",
+  "source_sha256": "d7e76977180239b15193398e3f31ac7e391447d55e7ddbb3e626844118d89277",
+  "code_cells": 17,
+  "saved_errors": [],
+  "nonempty_code_without_execution_count": [
+    2
+  ],
+  "imports": [
+    "from torch.utils.data import Dataset, DataLoader",
+    "from tqdm.auto import tqdm",
+    "import cv2",
+    "import matplotlib.pyplot as plt",
+    "import numpy as np",
+    "import random",
+    "import torch",
+    "import torch.nn as nn",
+    "import torch.optim as optim"
+  ],
+  "review_mode": "static; no cells executed"
+}

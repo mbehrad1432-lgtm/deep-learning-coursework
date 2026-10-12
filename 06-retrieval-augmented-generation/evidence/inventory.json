@@ -1,0 +1,29 @@
+{
+  "folder": "06-retrieval-augmented-generation",
+  "title": "Retrieval-Augmented and Conversational Generation",
+  "source": "Notebook3-RAG_completed.ipynb",
+  "source_sha256": "e395fd20141e4d9ac4b31bc3b6ac2d8050732bde6f1339b8ac7d2a70168cb1f5",
+  "code_cells": 19,
+  "saved_errors": [],
+  "nonempty_code_without_execution_count": [],
+  "imports": [
+    "from datasets import load_dataset",
+    "from langchain_community.vectorstores import FAISS as LangChainFAISS",
+    "from langchain_core.documents import Document",
+    "from langchain_core.messages import HumanMessage, AIMessage",
+    "from langchain_huggingface import HuggingFaceEmbeddings",
+    "from sentence_transformers import SentenceTransformer",
+    "from transformers import AutoTokenizer, AutoModelForSeq2SeqLM",
+    "from transformers import GPT2LMHeadModel, GPT2Tokenizer",
+    "from typing import List, Tuple, Dict",
+    "import faiss",
+    "import json",
+    "import numpy as np",
+    "import os",
+    "import pandas as pd",
+    "import re",
+    "import sys",
+    "import torch"
+  ],
+  "review_mode": "static; no cells executed"
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "cell": 8,
+    "output": 0,
+    "text": "Testing affine_forward function:\ndifference:  9.769849468192957e-10\n"
+  },
+  {
+    "cell": 11,
+    "output": 0,
+    "text": "Testing affine_backward function:\ndx error:  5.399100368651805e-11\ndw error:  9.904211865398145e-11\ndb error:  2.4122867568119087e-11\n"
+  },
+  {
+    "cell": 14,
+    "output": 0,
+    "text": "Testing relu_forward function:\ndifference:  4.999999798022158e-08\n"
+  },
+  {
+    "cell": 18,
+    "output": 0,
+    "text": "Testing relu_backward function:\ndx error:  3.2756349136310288e-12\n"
+  },
+  {
+    "cell": 21,
+    "output": 0,
+    "text": "Testing sigmoid_forward function:\ndifference:  6.383174040859927e-07\n"
+  },
+  {
+    "cell": 25,
+    "output": 0,
+    "text": "Testing sigmoid_backward function:\ndx error:  3.446520386706568e-11\n"
+  },
+  {
+    "cell": 29,
+    "output": 0,
+    "text": "\nTesting mse_loss:\nloss:  1.8672282748726519\ndx error:  2.8607953262121067e-09\n"
+  },
+  {
+    "cell": 33,
+    "output": 0,
+    "text": "Running check with reg =  0\nInitial loss:  5466.865706251272\nW1 relative error: 5.635683954807205e-05\nW2 relative error: 1.613210683498996e-05\nW3 relative error: 6.898987504530194e-07\nb1 relative error: 1.5616081970079422e-06\nb2 relative error: 4.3057176756698825e-08\nb3 relative error: 1.6746974192121475e-10\nRunning check with reg =  3.14\nInitial loss:  5470.037222826219\nW1 relative error: 1.618239636862678e-05\nW2 relative error: 0.0004837100232379589\nW3 relative error: 8.259345108745253e-06\nb1 relative error: 2.626926800500172e-07\nb2 relative error: 1.2120991887982816e-07\nb3 relative error: 1.7983206598641928e-10\n"
+  },
+  {
+    "cell": 37,
+    "output": 0,
+    "text": "next_w error:  8.882347033505819e-09\nvelocity error:  4.269287743278663e-09\n"
+  },
+  {
+    "cell": 40,
+    "output": 0,
+    "text": "   MedInc  HouseAge  AveRooms  AveBedrms  Population  AveOccup  Latitude  \\\n0  8.3252      41.0  6.984127   1.023810       322.0  2.555556     37.88   \n1  8.3014      21.0  6.238137   0.971880      2401.0  2.109842     37.86   \n2  7.2574      52.0  8.288136   1.073446       496.0  2.802260     37.85   \n3  5.6431      52.0  5.817352   1.073059       558.0  2.547945     37.85   \n4  3.8462      52.0  6.281853   1.081081       565.0  2.181467     37.85   \n\n   Longitude  MedHouseVal  \n0    -122.23        4.526  \n1    -122.22        3.585  \n2    -122.24        3.521  \n3    -122.25        3.413  \n4    -122.25        3.422  "
+  },
+  {
+    "cell": 41,
+    "output": 0,
+    "text": "Train data shape:  (15640, 8)\nTrain target values shape:  (15640,)\nValidation data shape:  (2500, 8)\nValidation target values shape:  (2500,)\nTest data shape:  (2500, 8)\nTest target values shape:  (2500,)\n"
+  },
+  {
+    "cell": 44,
+    "output": 0,
+    "text": "(Iteration 1 / 1560) loss: 2.800038\n(Epoch 0 / 20) train RMS error: 1.890579; val RMS error: 2.609558\n(Epoch 1 / 20) train RMS error: 1.264337; val RMS error: 1.685612\n(Iteration 101 / 1560) loss: 1.707064\n(Epoch 2 / 20) train RMS error: 1.247032; val RMS error: 1.547130\n(Iteration 201 / 1560) loss: 1.410730\n(Epoch 3 / 20) train RMS error: 1.279772; val RMS error: 1.542505\n(Iteration 301 / 1560) loss: 1.490839\n(Epoch 4 / 20) train RMS error: 1.155169; val RMS error: 1.525237\n(Epoch 5 / 20) train RMS error: 1.267619; val RMS error: 1.536020\n(Iteration 401 / 1560) loss: 1.663584\n(Epoch 6 / 20) train RMS error: 1.202932; val RMS error: 1.534726\n(Iteration 501 / 1560) loss: 1.500326\n(Epoch 7 / 20) train RMS error: 1.209254; val RMS error: 1.528850\n(Iteration 601 / 1560) loss: 1.610140\n(Epoch 8 / 20) train RMS error: 1.261017; val RMS error: 1.530035\n(Iteration 701 / 1560) loss: 1.439611\n(Epoch 9 / 20) train RMS error: 1.227108; val RMS error: 1.530932\n(Epoch 10 / 20) train RMS error: 1.303769; val RMS error: 1.533858\n(Iteration 801 / 1560) loss: 1.278372\n(Epoch 11 / 20) train RMS error: 1.223695; val RMS error: 1.535405\n(Iteration 901 / 1560) loss: 1.505908\n(Epoch 12 / 20) train RMS error: 1.262778; val RMS error: 1.534099\n(Iteration 1001 / 1560) loss: 1.490172\n(Epoch 13 / 20) train RMS error: 1.211570; val RMS error: 1.531785\n(Epoch 14 / 20) train RMS error: 1.204722; val RMS error: 1.536858\n(Iteration 1101 / 1560) loss: 1.339246\n(Epoch 15 / 20) train RMS error: 1.205741; val RMS error: 1.531359\n(Iteration 1201 / 1560) loss: 1.487924\n(Epoch 16 / 20) train RMS error: 1.209012; val RMS error: 1.538393\n(Iteration 1301 / 1560) loss: 1.380038\n(Epoch 17 / 20) train RMS error: 1.235318; val RMS error: 1.529830\n(Iteration 1401 / 1560) loss: 1.219574\n(Epoch 18 / 20) train RMS error: 1.272084; val RMS error: 1.530370\n(Epoch 19 / 20) train RMS error: 1.253062; val RMS error: 1.531092\n(Iteration 1501 / 1560) loss: 1.419039\n(Epoch 20 / 20) train RMS error: 1.200434; val RMS error: 1.533512\n"
+  },
+  {
+    "cell": 46,
+    "output": 0,
+    "text": "<Figure size 1400x500 with 2 Axes>"
+  }
+]

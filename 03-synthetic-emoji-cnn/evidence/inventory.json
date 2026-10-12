@@ -1,0 +1,23 @@
+{
+  "folder": "03-synthetic-emoji-cnn",
+  "title": "Synthetic Emoji CNN Classification",
+  "source": "EmojiClassification.ipynb",
+  "source_sha256": "a66535ba12c75027b1c9bb467f8d228b3bfd97f6dd505108366686d553876974",
+  "code_cells": 17,
+  "saved_errors": [],
+  "nonempty_code_without_execution_count": [],
+  "imports": [
+    "from PIL import Image, ImageDraw, ImageFilter, ImageOps, ImageEnhance",
+    "from copy import deepcopy",
+    "from sklearn.metrics import (",
+    "from torch.utils.data import Dataset, DataLoader",
+    "import math",
+    "import matplotlib.pyplot as plt",
+    "import numpy as np",
+    "import pandas as pd",
+    "import random",
+    "import torch",
+    "import torch.nn as nn"
+  ],
+  "review_mode": "static; no cells executed"
+}
