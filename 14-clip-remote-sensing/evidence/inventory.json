@@ -1,0 +1,62 @@
+{
+  "folder": "14-clip-remote-sensing",
+  "title": "CLIP Remote Sensing, LoRA and Retrieval",
+  "source": "P2_completed(1).ipynb",
+  "source_sha256": "89df1f61e5895baba89a1a3e23470e205ea45efd8df797cba37b43808332f863",
+  "code_cells": 77,
+  "saved_errors": [
+    {
+      "cell": 101,
+      "type": "KeyboardInterrupt",
+      "message": ""
+    },
+    {
+      "cell": 138,
+      "type": "ChunkedEncodingError",
+      "message": "('Connection broken: IncompleteRead(118847463 bytes read, 1054395917 more expected)', IncompleteRead(118847463 bytes read, 1054395917 more expected))"
+    }
+  ],
+  "nonempty_code_without_execution_count": [
+    103,
+    134,
+    138
+  ],
+  "imports": [
+    "from PIL import Image",
+    "from collections import Counter, defaultdict",
+    "from datasets import load_dataset",
+    "from diffusers import StableDiffusionPipeline",
+    "from diffusers import StableDiffusionPipeline, DPMSolverMultistepScheduler",
+    "from diffusers import UNet2DConditionModel",
+    "from pathlib import Path",
+    "from peft import LoraConfig as PeftLoraConfig",
+    "from peft import LoraConfig, get_peft_model, PeftModel",
+    "from peft import get_peft_model as peft_get_peft_model",
+    "from safetensors.torch import load_file",
+    "from sklearn.decomposition import PCA",
+    "from sklearn.manifold import TSNE",
+    "from sklearn.metrics import (",
+    "from sklearn.neighbors import NearestNeighbors",
+    "from torch.utils.data import Dataset, DataLoader",
+    "from tqdm.auto import tqdm",
+    "from transformers import (",
+    "import faiss",
+    "import gc",
+    "import importlib.util",
+    "import json",
+    "import math",
+    "import matplotlib.pyplot as plt",
+    "import numpy as np",
+    "import os",
+    "import pandas as pd",
+    "import psutil",
+    "import random",
+    "import seaborn as sns",
+    "import subprocess",
+    "import sys",
+    "import time",
+    "import torch",
+    "import torch.nn.functional as F"
+  ],
+  "review_mode": "static; no cells executed"
+}

@@ -1,0 +1,567 @@
+[
+  {
+    "cell": 6,
+    "output": 0,
+    "text": "PyTorch version: 2.7.1+cu126\nCUDA available: True\nGPU name: NVIDIA GeForce GTX 1650\nGPU memory: 4.29 GB\n"
+  },
+  {
+    "cell": 8,
+    "output": 0,
+    "text": "c:\\Users\\psp\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\tqdm\\auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html\n  from .autonotebook import tqdm as notebook_tqdm\n"
+  },
+  {
+    "cell": 10,
+    "output": 0,
+    "text": "{\n  \"project_dir\": \"\\\\content\\\\resisc45_clip_project\",\n  \"cache_dir\": \"\\\\content\\\\resisc45_clip_project\\\\hf_cache\",\n  \"output_dir\": \"\\\\content\\\\resisc45_clip_project\\\\outputs\",\n  \"dataset_id\": \"timm/resisc45\",\n  \"clip_model_id\": \"openai/clip-vit-large-patch14\",\n  \"sd_text_encoder_reference_id\": \"openai/clip-vit-large-patch14\",\n  \"sd_model_id\": \"runwayml/stable-diffusion-v1-5\",\n  \"device\": \"cuda\",\n  \"batch_size\": 16,\n  \"num_workers\": 0,\n  \"random_seed\": 42\n}\n"
+  },
+  {
+    "cell": 14,
+    "output": 0,
+    "text": "Loading CLIP model: openai/clip-vit-large-patch14\n"
+  },
+  {
+    "cell": 14,
+    "output": 1,
+    "text": "c:\\Users\\psp\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\transformers\\tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884\n  warnings.warn(\n"
+  },
+  {
+    "cell": 14,
+    "output": 2,
+    "text": "Model loaded.\nDevice: cuda\nProjection dimension: 768\nVision model type: clip_vision_model\nText model type: clip_text_model\n"
+  },
+  {
+    "cell": 16,
+    "output": 0,
+    "text": "DatasetDict({\n    train: Dataset({\n        features: ['image', 'label', 'image_id'],\n        num_rows: 18900\n    })\n    validation: Dataset({\n        features: ['image', 'label', 'image_id'],\n        num_rows: 6300\n    })\n    test: Dataset({\n        features: ['image', 'label', 'image_id'],\n        num_rows: 6300\n    })\n})\nAvailable splits: ['train', 'validation', 'test']\n"
+  },
+  {
+    "cell": 18,
+    "output": 0,
+    "text": "        split  num_images\n0       train       18900\n1  validation        6300\n2        test        6300"
+  },
+  {
+    "cell": 18,
+    "output": 1,
+    "text": "Number of classes: 45\nFirst 10 class names: ['airplane', 'airport', 'baseball_diamond', 'basketball_court', 'beach', 'bridge', 'chaparral', 'church', 'circular_farmland', 'cloud']\nFirst 10 cleaned class names: ['airplane', 'airport', 'baseball diamond', 'basketball court', 'beach', 'bridge', 'chaparral', 'church', 'circular farmland', 'cloud']\n\nSample\n------\nImage type: <class 'PIL.JpegImagePlugin.JpegImageFile'>\nLabel id: 32\nLabel name: river\nImage id: river_066\n"
+  },
+  {
+    "cell": 20,
+    "output": 0,
+    "text": "Train size: 18900\nValidation size: 6300\nFull test size: 6300\n\nBatch check\n-----------\nBatch keys: dict_keys(['images', 'labels', 'class_names', 'image_ids'])\nNumber of images: 16\nLabels shape: torch.Size([16])\nFirst image id: rectangular_farmland_124\nFirst class name: rectangular_farmland\n"
+  },
+  {
+    "cell": 22,
+    "output": 0,
+    "text": "<Figure size 900x300 with 3 Axes>"
+  },
+  {
+    "cell": 25,
+    "output": 0,
+    "text": "Number of classes: 45\nNumber of prompts: 45\nPrompt template: a satellite image of a {}\n"
+  },
+  {
+    "cell": 29,
+    "output": 0,
+    "text": "Text features shape: torch.Size([45, 768])\nCLIP logit scale: 100.0\n"
+  },
+  {
+    "cell": 31,
+    "output": 0,
+    "text": "Zero-shot evaluation: 100%|██████████| 394/394 [11:14<00:00,  1.71s/it]"
+  },
+  {
+    "cell": 31,
+    "output": 1,
+    "text": "Zero-shot classification results\n--------------------------------\nEvaluation split: full test\nPrompt template: a satellite image of a {}\nImages: 6300\nClasses: 45\nTop-1 Accuracy: 0.6779\nRecall@5:       0.9470\nElapsed time:   674.15 seconds\n\nStored objects for later parts:\n- zero_shot_results\n- base_full_test_results\n- df_zero_shot_predictions\n"
+  },
+  {
+    "cell": 31,
+    "output": 2,
+    "text": "\n"
+  },
+  {
+    "cell": 33,
+    "output": 0,
+    "text": "    class_id             class_name  total  correct  accuracy\n0         15            golf_course    122      122  1.000000\n1         28            parking_lot    135      132  0.977778\n2         31   rectangular_farmland    135      132  0.977778\n3         33             roundabout    134      129  0.962687\n4         17                 harbor    142      136  0.957746\n5         24       mobile_home_park    164      157  0.957317\n6         21                   lake    131      122  0.931298\n7          4                  beach    130      120  0.923077\n8         39                stadium    142      131  0.922535\n9         40           storage_tank    137      126  0.919708\n10        37               snowberg    159      146  0.918239\n11        19           intersection    130      118  0.907692\n12         8      circular_farmland    146      132  0.904110\n13        35                sea_ice    151      135  0.894040\n14        34                 runway    143      127  0.888112\n15         7                 church    143      126  0.881119\n16         5                 bridge    140      122  0.871429\n17         2       baseball_diamond    123      107  0.869919\n18        12                 desert    146      121  0.828767\n19        43  thermal_power_station    154      125  0.811688\n20        20                 island    139      109  0.784173\n21        13                 forest    146      112  0.767123\n22         3       basketball_court    134      100  0.746269\n23        18        industrial_area    140      104  0.742857\n24        26               overpass    150      110  0.733333\n25        11      dense_residential    144      103  0.715278\n26        44                wetland    118       82  0.694915\n27        16     ground_track_field    127       83  0.653543\n28        30        railway_station    154       99  0.642857\n29        36                   ship    135       85  0.629630\n30        27                 palace    140       83  0.592857\n31        41           tennis_court    144       85  0.590278\n32        10        commercial_area    140       76  0.542857\n33        29                railway    140       72  0.514286\n34        32                  river    153       71  0.464052\n35         9                  cloud    159       68  0.427673\n36        14                freeway    118       44  0.372881\n37         6              chaparral    132       49  0.371212\n38         0               airplane    169       55  0.325444\n39         1                airport    162       40  0.246914\n40        22                 meadow    130       31  0.238462\n41        23     medium_residential    147       20  0.136054\n42        25               mountain    115       15  0.130435\n43        38     sparse_residential    130        8  0.061538\n44        42                terrace    127        1  0.007874"
+  },
+  {
+    "cell": 33,
+    "output": 1,
+    "text": "Best classes:\n"
+  },
+  {
+    "cell": 33,
+    "output": 2,
+    "text": "   class_id            class_name  total  correct  accuracy\n0        15           golf_course    122      122  1.000000\n1        28           parking_lot    135      132  0.977778\n2        31  rectangular_farmland    135      132  0.977778\n3        33            roundabout    134      129  0.962687\n4        17                harbor    142      136  0.957746"
+  },
+  {
+    "cell": 33,
+    "output": 3,
+    "text": "Worst classes:\n"
+  },
+  {
+    "cell": 33,
+    "output": 4,
+    "text": "    class_id          class_name  total  correct  accuracy\n40        22              meadow    130       31  0.238462\n41        23  medium_residential    147       20  0.136054\n42        25            mountain    115       15  0.130435\n43        38  sparse_residential    130        8  0.061538\n44        42             terrace    127        1  0.007874"
+  },
+  {
+    "cell": 35,
+    "output": 0,
+    "text": "<Figure size 1000x800 with 2 Axes>"
+  },
+  {
+    "cell": 37,
+    "output": 0,
+    "text": "    true_class_id          true_class  pred_class_id            pred_class  \\\n0               1             airport             34                runway   \n1              42             terrace             31  rectangular_farmland   \n2               0            airplane              1               airport   \n3              23  medium_residential             11     dense_residential   \n4              29             railway             30       railway_station   \n5              14             freeway             26              overpass   \n6               6           chaparral             12                desert   \n7              23  medium_residential             24      mobile_home_park   \n8              38  sparse_residential             23    medium_residential   \n9              27              palace              7                church   \n10             38  sparse_residential             24      mobile_home_park   \n11             16  ground_track_field             39               stadium   \n12             26            overpass             14               freeway   \n13             32               river              5                bridge   \n14             10     commercial_area             11     dense_residential   \n\n    count  \n0     122  \n1     111  \n2      95  \n3      81  \n4      60  \n5      59  \n6      48  \n7      42  \n8      41  \n9      37  \n10     34  \n11     33  \n12     33  \n13     28  \n14     26  "
+  },
+  {
+    "cell": 39,
+    "output": 0,
+    "text": "<Figure size 400x400 with 1 Axes>"
+  },
+  {
+    "cell": 41,
+    "output": 0,
+    "text": "<Figure size 400x400 with 1 Axes>"
+  },
+  {
+    "cell": 44,
+    "output": 0,
+    "text": "Part 2 configuration\n--------------------\nPCA components before t-SNE: 50\nt-SNE perplexity: 30\nNearest neighbors k: 10\n"
+  },
+  {
+    "cell": 46,
+    "output": 0,
+    "text": "Embedding source: part1_zero_shot_results\nImage embeddings shape: torch.Size([6300, 768])\nLabels shape: torch.Size([6300])\nNumber of image ids: 6300\n"
+  },
+  {
+    "cell": 48,
+    "output": 0,
+    "text": "   row_index                   image_id  label_id             class_name  \\\n0          0   rectangular_farmland_124        31   rectangular_farmland   \n1          1      dense_residential_284        11      dense_residential   \n2          2            parking_lot_674        28            parking_lot   \n3          3  thermal_power_station_536        43  thermal_power_station   \n4          4           tennis_court_162        41           tennis_court   \n\n   pred_label             pred_class  confidence  correct  \n0          31   rectangular_farmland    0.829204     True  \n1          11      dense_residential    0.553165     True  \n2          28            parking_lot    0.996339     True  \n3          43  thermal_power_station    0.995826     True  \n4          41           tennis_court    0.903114     True  "
+  },
+  {
+    "cell": 48,
+    "output": 1,
+    "text": "Embedding dataframe shape: (6300, 8)\nNumber of unique classes: 45\nZero-shot accuracy in dataframe: 0.677936507936508\n"
+  },
+  {
+    "cell": 50,
+    "output": 0,
+    "text": "Embedding matrix: (6300, 768)\nMinimum norm: 0.9999999\nMaximum norm: 1.0000001\nMean norm: 1.0\n"
+  },
+  {
+    "cell": 54,
+    "output": 0,
+    "text": "PCA output shape: (6300, 50)\nExplained variance by first component: 0.0946\nCumulative explained variance: 0.7318\nt-SNE output shape: (6300, 2)\n"
+  },
+  {
+    "cell": 56,
+    "output": 0,
+    "text": "   row_index                   image_id             class_name  \\\n0          0   rectangular_farmland_124   rectangular_farmland   \n1          1      dense_residential_284      dense_residential   \n2          2            parking_lot_674            parking_lot   \n3          3  thermal_power_station_536  thermal_power_station   \n4          4           tennis_court_162           tennis_court   \n\n              pred_class  confidence  correct     pca_1     pca_2     tsne_1  \\\n0   rectangular_farmland    0.829204     True  0.037918  0.131267  -4.308572   \n1      dense_residential    0.553165     True -0.242994  0.100804 -29.945766   \n2            parking_lot    0.996339     True -0.180339  0.036683 -40.204987   \n3  thermal_power_station    0.995826     True  0.118043 -0.258998 -16.280083   \n4           tennis_court    0.903114     True -0.224633  0.147558 -50.887142   \n\n      tsne_2  \n0  58.476669  \n1  21.049030  \n2   4.867519  \n3 -57.837898  \n4  16.893993  "
+  },
+  {
+    "cell": 58,
+    "output": 0,
+    "text": "<Figure size 700x500 with 2 Axes>"
+  },
+  {
+    "cell": 60,
+    "output": 0,
+    "text": "<Figure size 700x500 with 2 Axes>"
+  },
+  {
+    "cell": 62,
+    "output": 0,
+    "text": "<Figure size 700x500 with 1 Axes>"
+  },
+  {
+    "cell": 64,
+    "output": 0,
+    "text": "Most compact classes:\n"
+  },
+  {
+    "cell": 64,
+    "output": 1,
+    "text": "   class_id         class_name  num_samples  mean_cosine_similarity  \\\n0         8  circular_farmland          146                0.936135   \n1        15        golf_course          122                0.920086   \n2        35            sea_ice          151                0.915295   \n3         6          chaparral          132                0.912734   \n4        26           overpass          150                0.911416   \n\n   mean_cosine_distance  std_cosine_distance  \n0              0.063865             0.032178  \n1              0.079914             0.031601  \n2              0.084705             0.039251  \n3              0.087266             0.042382  \n4              0.088584             0.030726  "
+  },
+  {
+    "cell": 64,
+    "output": 2,
+    "text": "Least compact classes:\n"
+  },
+  {
+    "cell": 64,
+    "output": 3,
+    "text": "    class_id class_name  num_samples  mean_cosine_similarity  \\\n40        21       lake          131                0.863187   \n41        20     island          139                0.858553   \n42        39    stadium          142                0.853642   \n43         7     church          143                0.849415   \n44        27     palace          140                0.840078   \n\n    mean_cosine_distance  std_cosine_distance  \n40              0.136813             0.032980  \n41              0.141447             0.051030  \n42              0.146358             0.035012  \n43              0.150585             0.036604  \n44              0.159922             0.035060  "
+  },
+  {
+    "cell": 64,
+    "output": 4,
+    "text": "Closest class centroid pairs:\n"
+  },
+  {
+    "cell": 64,
+    "output": 5,
+    "text": "   class_a_id               class_a  class_b_id             class_b  \\\n0           7                church          27              palace   \n1          14               freeway          26            overpass   \n2          11     dense_residential          23  medium_residential   \n3          29               railway          30     railway_station   \n4          13                forest          22              meadow   \n5          23    medium_residential          24    mobile_home_park   \n6          31  rectangular_farmland          42             terrace   \n7          23    medium_residential          38  sparse_residential   \n8           3      basketball_court          41        tennis_court   \n9          18       industrial_area          30     railway_station   \n\n   cosine_similarity  cosine_distance  \n0           0.962240         0.037760  \n1           0.961148         0.038852  \n2           0.959709         0.040291  \n3           0.955833         0.044167  \n4           0.954504         0.045496  \n5           0.952991         0.047009  \n6           0.942027         0.057973  \n7           0.939768         0.060232  \n8           0.938157         0.061843  \n9           0.937936         0.062064  "
+  },
+  {
+    "cell": 64,
+    "output": 6,
+    "text": "Highest nearest-neighbor consistency:\n"
+  },
+  {
+    "cell": 64,
+    "output": 7,
+    "text": "   class_id   class_name  num_samples  mean_same_class_neighbor_ratio  \\\n0        35      sea_ice          151                        0.995364   \n1        15  golf_course          122                        0.986885   \n2         6    chaparral          132                        0.982576   \n3        37     snowberg          159                        0.974843   \n4        17       harbor          142                        0.968310   \n\n   std_same_class_neighbor_ratio  \n0                       0.031175  \n1                       0.084883  \n2                       0.066851  \n3                       0.085391  \n4                       0.128024  "
+  },
+  {
+    "cell": 64,
+    "output": 8,
+    "text": "Lowest nearest-neighbor consistency:\n"
+  },
+  {
+    "cell": 64,
+    "output": 9,
+    "text": "    class_id          class_name  num_samples  mean_same_class_neighbor_ratio  \\\n40        23  medium_residential          147                        0.668027   \n41        14             freeway          118                        0.650847   \n42         7              church          143                        0.645455   \n43        30     railway_station          154                        0.635065   \n44        27              palace          140                        0.575714   \n\n    std_same_class_neighbor_ratio  \n40                       0.244389  \n41                       0.285154  \n42                       0.265953  \n43                       0.287744  \n44                       0.276165  "
+  },
+  {
+    "cell": 66,
+    "output": 0,
+    "text": "<Figure size 800x600 with 1 Axes>"
+  },
+  {
+    "cell": 69,
+    "output": 0,
+    "text": "Number of prompt templates: 9\nCanonical prompt: a satellite image of a {}\n"
+  },
+  {
+    "cell": 69,
+    "output": 1,
+    "text": "             prompt_id                                   template\n0              minimal                                         {}\n1                photo                            a photo of a {}\n2                image                           an image of a {}\n3  satellite_canonical                  a satellite image of a {}\n4       remote_sensing             a remote sensing image of a {}\n5               aerial                    an aerial image of a {}\n6             overhead                   an overhead view of a {}\n7   high_res_satellite  a high resolution satellite image of a {}\n8    cropped_satellite          a cropped satellite image of a {}"
+  },
+  {
+    "cell": 71,
+    "output": 0,
+    "text": "Prompt experiment data\n----------------------\nData source: part2_normalized_embeddings\nImage features: (6300, 768)\nLabels: (6300,)\nImage ids: 6300\n"
+  },
+  {
+    "cell": 75,
+    "output": 0,
+    "text": "Evaluating prompts: 100%|██████████| 9/9 [00:00<00:00,  9.66it/s]\n"
+  },
+  {
+    "cell": 75,
+    "output": 1,
+    "text": "             prompt_id                            prompt_template  \\\n0               aerial                    an aerial image of a {}   \n1    cropped_satellite          a cropped satellite image of a {}   \n2             overhead                   an overhead view of a {}   \n3       remote_sensing             a remote sensing image of a {}   \n4  satellite_canonical                  a satellite image of a {}   \n5   high_res_satellite  a high resolution satellite image of a {}   \n6                image                           an image of a {}   \n7                photo                            a photo of a {}   \n8              minimal                                         {}   \n\n   top1_accuracy  recall_at_5  mean_confidence  \n0       0.710635     0.953810         0.696762  \n1       0.684762     0.945714         0.700253  \n2       0.683968     0.937143         0.707941  \n3       0.678095     0.941905         0.680904  \n4       0.677937     0.946984         0.676360  \n5       0.670635     0.943492         0.682231  \n6       0.660794     0.918889         0.715517  \n7       0.631429     0.908413         0.704091  \n8       0.592857     0.891111         0.682601  "
+  },
+  {
+    "cell": 75,
+    "output": 2,
+    "text": "Canonical prompt\n----------------\nPrompt ID: satellite_canonical\nTemplate: a satellite image of a {}\nTop-1 accuracy: 0.6779\nRecall@5:       0.9470\n\nBest single prompt\n------------------\nPrompt ID: aerial\nTemplate: an aerial image of a {}\nTop-1 accuracy: 0.7106\nRecall@5:       0.9538\n"
+  },
+  {
+    "cell": 77,
+    "output": 0,
+    "text": "<Figure size 900x1000 with 2 Axes>"
+  },
+  {
+    "cell": 79,
+    "output": 0,
+    "text": "Prompt method comparison\n------------------------\n"
+  },
+  {
+    "cell": 79,
+    "output": 1,
+    "text": "        method_type                    method_id  \\\n0   prompt_ensemble              domain_ensemble   \n1     single_prompt                       aerial   \n2   prompt_ensemble  top3_single_prompt_ensemble   \n3   prompt_ensemble       strong_domain_ensemble   \n4     single_prompt            cropped_satellite   \n5     single_prompt                     overhead   \n6     single_prompt               remote_sensing   \n7     single_prompt          satellite_canonical   \n8     single_prompt           high_res_satellite   \n9     single_prompt                        image   \n10    single_prompt                        photo   \n11    single_prompt                      minimal   \n\n                                          description  num_prompts  \\\n0   satellite_canonical, remote_sensing, aerial, o...            4   \n1                             an aerial image of a {}            1   \n2                 aerial, cropped_satellite, overhead            3   \n3   satellite_canonical, remote_sensing, aerial, h...            5   \n4                   a cropped satellite image of a {}            1   \n5                            an overhead view of a {}            1   \n6                      a remote sensing image of a {}            1   \n7                           a satellite image of a {}            1   \n8           a high resolution satellite image of a {}            1   \n9                                    an image of a {}            1   \n10                                    a photo of a {}            1   \n11                                                 {}            1   \n\n    top1_accuracy  recall_at_5  \n0        0.714127     0.956667  \n1        0.710635     0.953810  \n2        0.710635     0.954444  \n3        0.700952     0.954921  \n4        0.684762     0.945714  \n5        0.683968     0.937143  \n6        0.678095     0.941905  \n7        0.677937     0.946984  \n8        0.670635     0.943492  \n9        0.660794     0.918889  \n10       0.631429     0.908413  \n11       0.592857     0.891111  "
+  },
+  {
+    "cell": 79,
+    "output": 2,
+    "text": "Canonical vs best method\n------------------------\nCanonical method: satellite_canonical\nCanonical Top-1: 0.6779\nCanonical Recall@5: 0.9470\n\nBest method: domain_ensemble\nMethod type: prompt_ensemble\nDescription: satellite_canonical, remote_sensing, aerial, overhead\nBest Top-1: 0.7141\nBest Recall@5: 0.9567\n\nDelta from canonical\n--------------------\nTop-1 delta: +0.0362\nRecall@5 delta: +0.0097\n"
+  },
+  {
+    "cell": 83,
+    "output": 0,
+    "text": "        split  num_images  loader_batches\n0       train       18900            1182\n1  validation        6300             394\n2        test        6300             394"
+  },
+  {
+    "cell": 83,
+    "output": 1,
+    "text": "Base CLIP results from Part 1\n-----------------------------\nPrompt templates: ['a satellite image of a airplane', 'a satellite image of a airport', 'a satellite image of a baseball diamond', 'a satellite image of a basketball court', 'a satellite image of a beach', 'a satellite image of a bridge', 'a satellite image of a chaparral', 'a satellite image of a church', 'a satellite image of a circular farmland', 'a satellite image of a cloud', 'a satellite image of a commercial area', 'a satellite image of a dense residential', 'a satellite image of a desert', 'a satellite image of a forest', 'a satellite image of a freeway', 'a satellite image of a golf course', 'a satellite image of a ground track field', 'a satellite image of a harbor', 'a satellite image of a industrial area', 'a satellite image of a intersection', 'a satellite image of a island', 'a satellite image of a lake', 'a satellite image of a meadow', 'a satellite image of a medium residential', 'a satellite image of a mobile home park', 'a satellite image of a mountain', 'a satellite image of a overpass', 'a satellite image of a palace', 'a satellite image of a parking lot', 'a satellite image of a railway', 'a satellite image of a railway station', 'a satellite image of a rectangular farmland', 'a satellite image of a river', 'a satellite image of a roundabout', 'a satellite image of a runway', 'a satellite image of a sea ice', 'a satellite image of a ship', 'a satellite image of a snowberg', 'a satellite image of a sparse residential', 'a satellite image of a stadium', 'a satellite image of a storage tank', 'a satellite image of a tennis court', 'a satellite image of a terrace', 'a satellite image of a thermal power station', 'a satellite image of a wetland']\nTop-1 accuracy: 0.6779\nRecall@5:       0.9470\n"
+  },
+  {
+    "cell": 85,
+    "output": 0,
+    "text": "                           name                          value\n0                    CLIP model  openai/clip-vit-large-patch14\n1                     LoRA rank                              8\n2                    LoRA alpha                             16\n3                  LoRA dropout                           0.05\n4              train batch size                              8\n5         validation batch size                             16\n6               eval batch size                             16\n7   gradient accumulation steps                              4\n8    effective train batch size                             32\n9                        epochs                              1\n10                learning rate                         0.0001\n11              mixed precision                           True\n12       gradient checkpointing                           True"
+  },
+  {
+    "cell": 87,
+    "output": 0,
+    "text": "              usage                           template\n0       fine_tuning            an aerial image of a {}\n1       fine_tuning  a cropped satellite image of a {}\n2       fine_tuning           an overhead view of a {}\n3       fine_tuning          a satellite image of a {}\n4       fine_tuning     a remote sensing image of a {}\n5  final_evaluation          a satellite image of a {}"
+  },
+  {
+    "cell": 87,
+    "output": 1,
+    "text": "Final evaluation uses the same prompt as Part 1:\na satellite image of a {}\n"
+  },
+  {
+    "cell": 91,
+    "output": 0,
+    "text": "                          loader  dataset_size  batch_size  num_batches\n0       train_contrastive_loader         18900           8         2363\n1  validation_contrastive_loader          6300          16          394"
+  },
+  {
+    "cell": 91,
+    "output": 1,
+    "text": "            field             shape\n0       input_ids           (8, 10)\n1  attention_mask           (8, 10)\n2    pixel_values  (8, 3, 224, 224)\n3          labels              (8,)"
+  },
+  {
+    "cell": 91,
+    "output": 2,
+    "text": "Example training caption:\nan aerial image of a intersection\n"
+  },
+  {
+    "cell": 97,
+    "output": 0,
+    "text": "                 metric         value\n0      total_parameters  4.297792e+08\n1  trainable_parameters  2.162688e+06\n2     trainable_percent  5.032091e-01"
+  },
+  {
+    "cell": 97,
+    "output": 1,
+    "text": "trainable params: 2,162,688 || all params: 429,779,201 || trainable%: 0.5032\n"
+  },
+  {
+    "cell": 101,
+    "output": 0,
+    "text": "C:\\Users\\psp\\AppData\\Local\\Temp\\ipykernel_3532\\1328649759.py:31: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.\n  self.scaler = torch.cuda.amp.GradScaler(enabled=self.use_amp)\nTrain epoch 1/1:   0%|          | 0/2363 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 101,
+    "output": 1,
+    "text": "Train epoch 1/1:  20%|█▉        | 461/2363 [1:31:23<6:17:05, 11.90s/it, loss=0.0171]\n"
+  },
+  {
+    "cell": 103,
+    "output": 0,
+    "text": "Saved: I:\\دانشگاه\\ترم 8\\Deep learning\\HW\\HW5\\clip_lora_partial\n"
+  },
+  {
+    "cell": 104,
+    "output": 0,
+    "text": "Merged fine-tuned CLIP model saved to:\n\\content\\resisc45_clip_project\\outputs\\part4_lora_finetuning\\clip_resisc45_lora_merged\n"
+  },
+  {
+    "cell": 107,
+    "output": 0,
+    "text": "Fine-tuned zero-shot evaluation: 100%|██████████| 394/394 [11:22<00:00,  1.73s/it]"
+  },
+  {
+    "cell": 107,
+    "output": 1,
+    "text": "Fine-tuned CLIP full test results\n---------------------------------\nEvaluation split: full test\nPrompt template: a satellite image of a {}\nTop-1 accuracy: 0.8870\nRecall@5:       0.9962\nImages:         6300\nTime:           682.78 seconds\n"
+  },
+  {
+    "cell": 107,
+    "output": 2,
+    "text": "\n"
+  },
+  {
+    "cell": 109,
+    "output": 0,
+    "text": "                method  top1_accuracy  recall_at_5  num_test_images  \\\n0            base_clip       0.677937     0.946984             6300   \n1  lora_finetuned_clip       0.886984     0.996190             6300   \n\n                   prompt_template  \n0  a satellite image of a airplane  \n1        a satellite image of a {}  "
+  },
+  {
+    "cell": 109,
+    "output": 1,
+    "text": "Overall improvement\n-------------------\nTop-1 accuracy delta: +0.2090\nRecall@5 delta:       +0.0492\n"
+  },
+  {
+    "cell": 111,
+    "output": 0,
+    "text": "Most improved classes:\n"
+  },
+  {
+    "cell": 111,
+    "output": 1,
+    "text": "   class_id          class_name  total  correct_base  accuracy_base  \\\n0        42             terrace    127             1       0.007874   \n1        38  sparse_residential    130             8       0.061538   \n2        25            mountain    115            15       0.130435   \n3        23  medium_residential    147            20       0.136054   \n4         0            airplane    169            55       0.325444   \n5         1             airport    162            40       0.246914   \n6        22              meadow    130            31       0.238462   \n7         6           chaparral    132            49       0.371212   \n8         9               cloud    159            68       0.427673   \n9        32               river    153            71       0.464052   \n\n   correct_finetuned  accuracy_finetuned  accuracy_delta  \n0                111            0.874016        0.866142  \n1                119            0.915385        0.853846  \n2                108            0.939130        0.808696  \n3                135            0.918367        0.782313  \n4                165            0.976331        0.650888  \n5                141            0.870370        0.623457  \n6                111            0.853846        0.615385  \n7                130            0.984848        0.613636  \n8                151            0.949686        0.522013  \n9                143            0.934641        0.470588  "
+  },
+  {
+    "cell": 111,
+    "output": 2,
+    "text": "Most degraded classes:\n"
+  },
+  {
+    "cell": 111,
+    "output": 3,
+    "text": "    class_id            class_name  total  correct_base  accuracy_base  \\\n35        30       railway_station    154            99       0.642857   \n36        21                  lake    131           122       0.931298   \n37        15           golf_course    122           122       1.000000   \n38        33            roundabout    134           129       0.962687   \n39        28           parking_lot    135           132       0.977778   \n40        39               stadium    142           131       0.922535   \n41         7                church    143           126       0.881119   \n42        31  rectangular_farmland    135           132       0.977778   \n43        11     dense_residential    144           103       0.715278   \n44        24      mobile_home_park    164           157       0.957317   \n\n    correct_finetuned  accuracy_finetuned  accuracy_delta  \n35                101            0.655844        0.012987  \n36                123            0.938931        0.007634  \n37                122            1.000000        0.000000  \n38                128            0.955224       -0.007463  \n39                130            0.962963       -0.014815  \n40                128            0.901408       -0.021127  \n41                118            0.825175       -0.055944  \n42                118            0.874074       -0.103704  \n43                 84            0.583333       -0.131944  \n44                122            0.743902       -0.213415  "
+  },
+  {
+    "cell": 113,
+    "output": 0,
+    "text": "Most frequent fine-tuned confusion pairs:\n"
+  },
+  {
+    "cell": 113,
+    "output": 1,
+    "text": "   true_class_id            true_class  pred_class_id            pred_class  \\\n0             11     dense_residential             23    medium_residential   \n1             30       railway_station             29               railway   \n2             24      mobile_home_park             23    medium_residential   \n3             27                palace              7                church   \n4             14               freeway             26              overpass   \n5             29               railway             30       railway_station   \n6              1               airport             34                runway   \n7              7                church             27                palace   \n8             31  rectangular_farmland             42               terrace   \n9             42               terrace             31  rectangular_farmland   \n\n   count  \n0     58  \n1     36  \n2     32  \n3     29  \n4     26  \n5     23  \n6     20  \n7     18  \n8     14  \n9     14  "
+  },
+  {
+    "cell": 113,
+    "output": 2,
+    "text": "<Figure size 1000x800 with 2 Axes>"
+  },
+  {
+    "cell": 117,
+    "output": 0,
+    "text": "Part 5 retrieval configuration\n------------------------------\nQuery: an overhead view of storage tanks\nTop-k: 3\nBatch size: 16\n"
+  },
+  {
+    "cell": 119,
+    "output": 0,
+    "text": "Using merged LoRA fine-tuned CLIP model from memory.\nRetrieval model is ready.\nDevice: cuda\n"
+  },
+  {
+    "cell": 121,
+    "output": 0,
+    "text": "                    gallery  num_images  batch_size  num_batches\n0  RESISC45 full test split        6300          16          394"
+  },
+  {
+    "cell": 125,
+    "output": 0,
+    "text": "Encoding retrieval gallery: 100%|██████████| 394/394 [11:24<00:00,  1.74s/it]\n"
+  },
+  {
+    "cell": 125,
+    "output": 1,
+    "text": "   num_gallery_images  embedding_dim  min_norm  max_norm  mean_norm\n0                6300            768       1.0       1.0        1.0"
+  },
+  {
+    "cell": 127,
+    "output": 0,
+    "text": "FAISS index created.\nEmbedding dimension: 768\nIndexed images: 6300\n"
+  },
+  {
+    "cell": 131,
+    "output": 0,
+    "text": "<Figure size 1200x400 with 3 Axes>"
+  },
+  {
+    "cell": 131,
+    "output": 1,
+    "text": "Retrieval query:\nan overhead view of storage tanks\n\nRetrieved classes:\nstorage_tank, storage_tank, storage_tank\n"
+  },
+  {
+    "cell": 134,
+    "output": 0,
+    "text": "Part 6 configuration\n--------------------\nStable Diffusion model: runwayml/stable-diffusion-v1-5\nCLIP model: openai/clip-vit-large-patch14\nNumber of prompts: 3\nGeneration image size: 512 x 512\nInference steps: 5\nGuidance scale: 7.5\n\nPrompts:\n- a satellite image of an airport with runways\n- an aerial image of a harbor with ships and water\n- an overhead view of large circular storage tanks\n"
+  },
+  {
+    "cell": 136,
+    "output": 0,
+    "text": "Deleted model.\nDeleted zero_shot_classifier.\nDeleted prompt_evaluator.\nDeleted retrieval_model.\nDeleted retrieval_index.\nDeleted retrieval_image_embeddings.\nDeleted df_retrieval_gallery.\nDeleted df_single_query_results.\nDeleted merged_lora_model because MERGED_MODEL_DIR exists.\nCurrent Python process RAM usage: 1.28 GB\nMemory cleanup complete.\n"
+  },
+  {
+    "cell": 138,
+    "output": 0,
+    "text": "Fetching 14 files:   0%|          | 0/14 [00:00<?, ?it/s]Error while downloading from [temporary signed download URL removed] [SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2559)\nTrying to resume download...\nFetching 14 files:  93%|█████████▎| 13/14 [00:11<00:00,  1.11it/s]Error while downloading from [temporary signed download URL removed] [SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2559)\nTrying to resume download...\nError while downloading from [temporary signed download URL removed] [SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2559)\nTrying to resume download...\nError while downloading from [temporary signed download URL removed] [SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2559)\nTrying to resume download...\nError while downloading from [temporary signed download URL removed] [SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2559)\nTrying to resume download...\nError while downloading from [temporary signed download URL removed] [SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2559)\nTrying to resume download...\nError while downloading from [temporary signed download URL removed] [SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2559)\nTrying to resume download...\nError while downloading from [temporary signed download URL removed] [SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2559)\nTrying to resume download...\nError while downloading from [temporary signed download URL removed] [SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2559)\nTrying to resume download...\nFetching 14 files: 100%|██████████| 14/14 [05:50<00:00, 25.07s/it]\n"
+  },
+  {
+    "cell": 140,
+    "output": 0,
+    "text": "Current folder: i:\\دانشگاه\\ترم 8\\Deep learning\\HW\\HW5\nWeight file: I:\\دانشگاه\\ترم 8\\Deep learning\\HW\\HW5\\diffusion_pytorch_model.safetensors\nExists: True\nSize: 3.2 GB\nWeight file: I:\\دانشگاه\\ترم 8\\Deep learning\\HW\\HW5\\diffusion_pytorch_model.safetensors\nSize: 3.2 GB\n"
+  },
+  {
+    "cell": 140,
+    "output": 1,
+    "text": "c:\\Users\\psp\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\huggingface_hub\\file_download.py:147: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in I:\\content\\resisc45_clip_project\\hf_cache\\models--runwayml--stable-diffusion-v1-5. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.\nTo support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development\n  warnings.warn(message)\n"
+  },
+  {
+    "cell": 140,
+    "output": 2,
+    "text": "UNet weights loaded successfully\n<All keys matched successfully>\n"
+  },
+  {
+    "cell": 141,
+    "output": 0,
+    "text": "Fetching 13 files:  85%|████████▍ | 11/13 [00:13<00:02,  1.24s/it]Error while downloading from [temporary signed download URL removed] [SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2559)\nTrying to resume download...\nError while downloading from [temporary signed download URL removed] [SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2559)\nTrying to resume download...\nError while downloading from [temporary signed download URL removed] [SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2559)\nTrying to resume download...\nFetching 13 files: 100%|██████████| 13/13 [02:59<00:00, 13.84s/it]\nLoading pipeline components...:  50%|█████     | 3/6 [00:01<00:02,  1.48it/s]c:\\Users\\psp\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\transformers\\tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884\n  warnings.warn(\nLoading pipeline components...: 100%|██████████| 6/6 [00:01<00:00,  3.37it/s]\n"
+  },
+  {
+    "cell": 141,
+    "output": 1,
+    "text": "Stable Diffusion loaded successfully\n"
+  },
+  {
+    "cell": 142,
+    "output": 0,
+    "text": "Stable Diffusion pipeline loaded.\nPipeline device: cuda\nPipeline dtype: torch.float16\nOriginal SD text encoder: <class 'transformers.models.clip.modeling_clip.CLIPTextModel'>\n"
+  },
+  {
+    "cell": 143,
+    "output": 0,
+    "text": "Loaded fine-tuned text weights from: \\content\\resisc45_clip_project\\outputs\\part4_lora_finetuning\\clip_resisc45_lora_merged\nSource text tensors: 196\nCopied tensors: 196\nSkipped source tensors: 0\nUnmatched target tensors: 0\nFine-tuned SD-compatible text encoder is ready.\n<class 'transformers.models.clip.modeling_clip.CLIPTextModel'>\n"
+  },
+  {
+    "cell": 147,
+    "output": 0,
+    "text": "UNet dtype: torch.float16\nText encoder dtype: torch.float16\nVAE dtype: torch.float16\n"
+  },
+  {
+    "cell": 148,
+    "output": 0,
+    "text": "AutoencoderKL(\n  (encoder): Encoder(\n    (conv_in): Conv2d(3, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (down_blocks): ModuleList(\n      (0): DownEncoderBlock2D(\n        (resnets): ModuleList(\n          (0-1): 2 x ResnetBlock2D(\n            (norm1): GroupNorm(32, 128, eps=1e-06, affine=True)\n            (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n            (norm2): GroupNorm(32, 128, eps=1e-06, affine=True)\n            (dropout): Dropout(p=0.0, inplace=False)\n            (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n            (nonlinearity): SiLU()\n          )\n        )\n        (downsamplers): ModuleList(\n          (0): Downsample2D(\n            (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2))\n          )\n        )\n      )\n      (1): DownEncoderBlock2D(\n        (resnets): ModuleList(\n          (0): ResnetBlock2D(\n            (norm1): GroupNorm(32, 128, eps=1e-06, affine=True)\n            (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n            (norm2): GroupNorm(32, 256, eps=1e-06, affine=True)\n            (dropout): Dropout(p=0.0, inplace=False)\n            (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n            (nonlinearity): SiLU()\n            (conv_shortcut): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1))\n          )\n          (1): ResnetBlock2D(\n            (norm1): GroupNorm(32, 256, eps=1e-06, affine=True)\n            (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n            (norm2): GroupNorm(32, 256, eps=1e-06, affine=True)\n            (dropout): Dropout(p=0.0, inplace=False)\n            (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n            (nonlinearity): SiLU()\n          )\n        )\n        (downsamplers): ModuleList(\n          (0): Downsample2D(\n            (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2))\n          )\n        )\n      )\n      (2): DownEncoderBlock2D(\n        (resnets): ModuleList(\n          (0): ResnetBlock2D(\n            (norm1): GroupNorm(32, 256, eps=1e-06, affine=True)\n            (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n            (norm2): GroupNorm(32, 512, eps=1e-06, affine=True)\n            (dropout): Dropout(p=0.0, inplace=False)\n            (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n            (nonlinearity): SiLU()\n            (conv_shortcut): Conv2d(256, 512, kernel_size=(1, 1), stride=(1, 1))\n          )\n          (1): ResnetBlock2D(\n            (norm1): GroupNorm(32, 512, eps=1e-06, affine=True)\n            (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n            (norm2): GroupNorm(32, 512, eps=1e-06, affine=True)\n            (dropout): Dropout(p=0.0, inplace=False)\n            (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n            (nonlinearity): SiLU()\n          )\n        )\n        (downsamplers): ModuleList(\n          (0): Downsample2D(\n            (conv): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2))\n          )\n        )\n      )\n      (3): DownEncoderBlock2D(\n        (resnets): ModuleList(\n          (0-1): 2 x ResnetBlock2D(\n            (norm1): GroupNorm(32, 512, eps=1e-06, affine=True)\n            (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n            (norm2): GroupNorm(32, 512, eps=1e-06, affine=True)\n            (dropout): Dropout(p=0.0, inplace=False)\n            (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n            (nonlinearity): SiLU()\n          )\n        )\n      )\n    )\n    (mid_block): UNetMidBlock2D(\n      (attentions): ModuleList(\n        (0): Attention(\n          (group_norm): GroupNorm(32, 512, eps=1e-06, affine=True)\n          (to_q): Linear(in_features=512, out_features=512, bias=True)\n          (to_k): Linear(in_features=512, out_features=512, bias=True)\n          (to_v): Linear(in_features=512, out_features=512, bias=True)\n          (to_out): ModuleList(\n            (0): Linear(in_features=512, out_features=512, bias=True)\n            (1): Dropout(p=0.0, inplace=False)\n          )\n        )\n      )\n      (resnets): ModuleList(\n        (0-1): 2 x ResnetBlock2D(\n          (norm1): GroupNorm(32, 512, eps=1e-06, affine=True)\n          (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n          (norm2): GroupNorm(32, 512, eps=1e-06, affine=True)\n          (dropout): Dropout(p=0.0, inplace=False)\n          (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n          (nonlinearity): SiLU()\n        )\n      )\n    )\n    (conv_norm_out): GroupNorm(32, 512, eps=1e-06, affine=True)\n    (conv_act): SiLU()\n    (conv_out): Conv2d(512, 8, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n  )\n  (decoder): Decoder(\n    (conv_in): Conv2d(4, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (up_blocks): ModuleList(\n      (0-1): 2 x UpDecoderBlock2D(\n        (resnets): ModuleList(\n          (0-2): 3 x ResnetBlock2D(\n            (norm1): GroupNorm(32, 512, eps=1e-06, affine=True)\n            (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n            (norm2): GroupNorm(32, 512, eps=1e-06, affine=True)\n            (dropout): Dropout(p=0.0, inplace=False)\n            (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n            (nonlinearity): SiLU()\n          )\n        )\n        (upsamplers): ModuleList(\n          (0): Upsample2D(\n            (conv): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n          )\n        )\n      )\n      (2): UpDecoderBlock2D(\n        (resnets): ModuleList(\n          (0): ResnetBlock2D(\n            (norm1): GroupNorm(32, 512, eps=1e-06, affine=True)\n            (conv1): Conv2d(512, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n            (norm2): GroupNorm(32, 256, eps=1e-06, affine=True)\n            (dropout): Dropout(p=0.0, inplace=False)\n            (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n            (nonlinearity): SiLU()\n            (conv_shortcut): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1))\n          )\n          (1-2): 2 x ResnetBlock2D(\n            (norm1): GroupNorm(32, 256, eps=1e-06, affine=True)\n            (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n            (norm2): GroupNorm(32, 256, eps=1e-06, affine=True)\n            (dropout): Dropout(p=0.0, inplace=False)\n            (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n            (nonlinearity): SiLU()\n          )\n        )\n        (upsamplers): ModuleList(\n          (0): Upsample2D(\n            (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n          )\n        )\n      )\n      (3): UpDecoderBlock2D(\n        (resnets): ModuleList(\n          (0): ResnetBlock2D(\n            (norm1): GroupNorm(32, 256, eps=1e-06, affine=True)\n            (conv1): Conv2d(256, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n            (norm2): GroupNorm(32, 128, eps=1e-06, affine=True)\n            (dropout): Dropout(p=0.0, inplace=False)\n            (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n            (nonlinearity): SiLU()\n            (conv_shortcut): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1))\n          )\n          (1-2): 2 x ResnetBlock2D(\n            (norm1): GroupNorm(32, 128, eps=1e-06, affine=True)\n            (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n            (norm2): GroupNorm(32, 128, eps=1e-06, affine=True)\n            (dropout): Dropout(p=0.0, inplace=False)\n            (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n            (nonlinearity): SiLU()\n          )\n        )\n      )\n    )\n    (mid_block): UNetMidBlock2D(\n      (attentions): ModuleList(\n        (0): Attention(\n          (group_norm): GroupNorm(32, 512, eps=1e-06, affine=True)\n          (to_q): Linear(in_features=512, out_features=512, bias=True)\n          (to_k): Linear(in_features=512, out_features=512, bias=True)\n          (to_v): Linear(in_features=512, out_features=512, bias=True)\n          (to_out): ModuleList(\n            (0): Linear(in_features=512, out_features=512, bias=True)\n            (1): Dropout(p=0.0, inplace=False)\n          )\n        )\n      )\n      (resnets): ModuleList(\n        (0-1): 2 x ResnetBlock2D(\n          (norm1): GroupNorm(32, 512, eps=1e-06, affine=True)\n          (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n          (norm2): GroupNorm(32, 512, eps=1e-06, affine=True)\n          (dropout): Dropout(p=0.0, inplace=False)\n          (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n          (nonlinearity): SiLU()\n        )\n      )\n    )\n    (conv_norm_out): GroupNorm(32, 128, eps=1e-06, affine=True)\n    (conv_act): SiLU()\n    (conv_out): Conv2d(128, 3, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n  )\n  (quant_conv): Conv2d(8, 8, kernel_size=(1, 1), stride=(1, 1))\n  (post_quant_conv): Conv2d(4, 4, kernel_size=(1, 1), stride=(1, 1))\n)"
+  },
+  {
+    "cell": 149,
+    "output": 0,
+    "text": "100%|██████████| 20/20 [01:18<00:00,  3.94s/it]\n"
+  },
+  {
+    "cell": 149,
+    "output": 1,
+    "text": "Min: nan\nMax: nan\nMean: nan\nHas NaN: True\n"
+  },
+  {
+    "cell": 150,
+    "output": 0,
+    "text": "Generating baseline Stable Diffusion images...\n"
+  },
+  {
+    "cell": 150,
+    "output": 1,
+    "text": "100%|██████████| 5/5 [00:20<00:00,  4.12s/it] 0/3 [00:00<?, ?it/s]\n100%|██████████| 5/5 [00:20<00:00,  4.13s/it] 1/3 [00:44<01:29, 44.95s/it]\n100%|██████████| 5/5 [00:19<00:00,  3.99s/it] 2/3 [01:29<00:44, 44.45s/it]\nStable Diffusion generation: 100%|██████████| 3/3 [02:12<00:00, 44.08s/it]\n"
+  },
+  {
+    "cell": 150,
+    "output": 2,
+    "text": "Replacing Stable Diffusion text encoder with the fine-tuned CLIP text encoder...\nGenerating images with the fine-tuned text encoder...\n"
+  },
+  {
+    "cell": 150,
+    "output": 3,
+    "text": "100%|██████████| 5/5 [00:17<00:00,  3.58s/it] 0/3 [00:00<?, ?it/s]\n100%|██████████| 5/5 [00:17<00:00,  3.43s/it] 1/3 [00:38<01:16, 38.28s/it]\n100%|██████████| 5/5 [00:18<00:00,  3.70s/it] 2/3 [01:15<00:37, 37.91s/it]\nStable Diffusion generation: 100%|██████████| 3/3 [01:55<00:00, 38.64s/it]\n"
+  },
+  {
+    "cell": 150,
+    "output": 4,
+    "text": "<Figure size 800x840 with 6 Axes>"
+  },
+  {
+    "cell": 150,
+    "output": 5,
+    "text": "Comparison complete.\nOriginal text encoder: <class 'transformers.models.clip.modeling_clip.CLIPTextModel'>\nFine-tuned text encoder: <class 'transformers.models.clip.modeling_clip.CLIPTextModel'>\n"
+  },
+  {
+    "cell": 151,
+    "output": 0,
+    "text": "UNet: torch.float32\nText encoder: torch.float32\nVAE: torch.float32\n"
+  },
+  {
+    "cell": 152,
+    "output": 0,
+    "text": "100%|██████████| 10/10 [00:10<00:00,  1.05s/it]\n"
+  },
+  {
+    "cell": 153,
+    "output": 0,
+    "text": "All finite: True\nHas NaN: False\nMin: 0.0\nMax: 1.0\nMean: 0.6065681\n"
+  }
+]

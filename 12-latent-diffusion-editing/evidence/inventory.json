@@ -1,0 +1,26 @@
+{
+  "folder": "12-latent-diffusion-editing",
+  "title": "Latent Diffusion Sampling and Image Editing",
+  "source": "P3_completed_reviewed.ipynb",
+  "source_sha256": "d599eb9f53d40975d5b0a63c1510a3ec3c8dd27796a6139911b09f5111207e69",
+  "code_cells": 20,
+  "saved_errors": [],
+  "nonempty_code_without_execution_count": [],
+  "imports": [
+    "from PIL import Image",
+    "from PIL import ImageDraw",
+    "from diffusers import StableDiffusionInpaintPipeline",
+    "from diffusers import StableDiffusionInstructPix2PixPipeline, EulerAncestralDiscreteScheduler",
+    "from diffusers import StableDiffusionPipeline, DDIMScheduler",
+    "from google.colab import userdata",
+    "from huggingface_hub import login",
+    "from itertools import combinations",
+    "from torchvision import transforms as T",
+    "import io, requests, gc",
+    "import matplotlib.pyplot as plt",
+    "import numpy as np",
+    "import torch, math, time",
+    "import torch.nn.functional as Fn"
+  ],
+  "review_mode": "static; no cells executed"
+}

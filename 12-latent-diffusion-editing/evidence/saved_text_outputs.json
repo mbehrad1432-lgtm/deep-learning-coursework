@@ -1,0 +1,367 @@
+[
+  {
+    "cell": 3,
+    "output": 0,
+    "text": "\u001b[2K     \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m43.7/43.7 kB\u001b[0m \u001b[31m2.6 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\n\u001b[2K   \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m2.9/2.9 MB\u001b[0m \u001b[31m40.6 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\n\u001b[2K   \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m9.5/9.5 MB\u001b[0m \u001b[31m55.8 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\n\u001b[2K   \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m324.4/324.4 kB\u001b[0m \u001b[31m17.6 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\n\u001b[2K   \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m436.6/436.6 kB\u001b[0m \u001b[31m28.4 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\n\u001b[2K   \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m3.6/3.6 MB\u001b[0m \u001b[31m49.7 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\n\u001b[?25h\u001b[31mERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\ngradio 6.20.0 requires huggingface-hub<2.0,>=1.2.0, but you have huggingface-hub 0.25.2 which is incompatible.\u001b[0m\u001b[31m\n\u001b[0m"
+  },
+  {
+    "cell": 5,
+    "output": 0,
+    "text": "Colab secret not found; falling back to manual login.\n"
+  },
+  {
+    "cell": 5,
+    "output": 1,
+    "text": "VBox(children=(HTML(value='<center> <img\\nsrc=https://huggingface.co/front/assets/huggingface_logo-noborder.sv…"
+  },
+  {
+    "cell": 5,
+    "output": 2,
+    "text": "Hugging Face login OK\n"
+  },
+  {
+    "cell": 6,
+    "output": 0,
+    "text": "CUDA: True\nGPU: Tesla T4\n"
+  },
+  {
+    "cell": 9,
+    "output": 0,
+    "text": "The cache for model files in Transformers v4.22.0 has been updated. Migrating your old cache. This is a one-time only operation. You can interrupt this and resume the migration later on by calling `transformers.utils.move_cache()`.\n"
+  },
+  {
+    "cell": 9,
+    "output": 1,
+    "text": "0it [00:00, ?it/s]"
+  },
+  {
+    "cell": 9,
+    "output": 2,
+    "text": "/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_token.py:90: UserWarning: \nThe secret `HF_TOKEN` does not exist in your Colab secrets.\nTo authenticate with the Hugging Face Hub, create a token in your settings tab (https://huggingface.co/settings/tokens), set it as secret in your Google Colab and restart your session.\nYou will be able to reuse this secret in all of your notebooks.\nPlease note that authentication is recommended but still optional to access public models or datasets.\n  warnings.warn(\n"
+  },
+  {
+    "cell": 9,
+    "output": 3,
+    "text": "model_index.json:   0%|          | 0.00/543 [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 9,
+    "output": 4,
+    "text": "Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 9,
+    "output": 5,
+    "text": "tokenizer_config.json:   0%|          | 0.00/807 [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 9,
+    "output": 6,
+    "text": "preprocessor_config.json:   0%|          | 0.00/342 [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 9,
+    "output": 7,
+    "text": "config.json:   0%|          | 0.00/613 [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 9,
+    "output": 8,
+    "text": "vocab.json: 0.00B [00:00, ?B/s]"
+  },
+  {
+    "cell": 9,
+    "output": 9,
+    "text": "scheduler_config.json:   0%|          | 0.00/346 [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 9,
+    "output": 10,
+    "text": "special_tokens_map.json:   0%|          | 0.00/460 [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 9,
+    "output": 11,
+    "text": "merges.txt: 0.00B [00:00, ?B/s]"
+  },
+  {
+    "cell": 9,
+    "output": 12,
+    "text": "config.json:   0%|          | 0.00/553 [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 9,
+    "output": 13,
+    "text": "config.json:   0%|          | 0.00/911 [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 9,
+    "output": 14,
+    "text": "diffusion_pytorch_model.safetensors:   0%|          | 0.00/3.46G [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 9,
+    "output": 15,
+    "text": "model.safetensors:   0%|          | 0.00/1.36G [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 9,
+    "output": 16,
+    "text": "diffusion_pytorch_model.safetensors:   0%|          | 0.00/335M [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 9,
+    "output": 17,
+    "text": "Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 9,
+    "output": 18,
+    "text": "/usr/local/lib/python3.12/dist-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884\n  warnings.warn(\n"
+  },
+  {
+    "cell": 9,
+    "output": 19,
+    "text": "unet in_channels: 4 | latent scale factor: 0.18215 | train timesteps: 1000\n"
+  },
+  {
+    "cell": 13,
+    "output": 0,
+    "text": "Pixel tensor shape : (3, 512, 512)\nLatent tensor shape: (1, 4, 64, 64)\nPixel elements      : 786,432\nLatent elements     : 16,384\nCompression ratio   : 48.00x\n"
+  },
+  {
+    "cell": 15,
+    "output": 0,
+    "text": "<Figure size 900x450 with 2 Axes>"
+  },
+  {
+    "cell": 15,
+    "output": 1,
+    "text": "VAE reconstruction PSNR: 25.67 dB\n"
+  },
+  {
+    "cell": 20,
+    "output": 0,
+    "text": "<Figure size 2700x450 with 6 Axes>"
+  },
+  {
+    "cell": 22,
+    "output": 0,
+    "text": "<Figure size 1200x400 with 2 Axes>"
+  },
+  {
+    "cell": 26,
+    "output": 0,
+    "text": "<Figure size 450x450 with 1 Axes>"
+  },
+  {
+    "cell": 28,
+    "output": 0,
+    "text": " 4 steps: 0.68 s\n10 steps: 1.43 s\n25 steps: 3.19 s\n50 steps: 6.21 s\n"
+  },
+  {
+    "cell": 28,
+    "output": 1,
+    "text": "<Figure size 1800x450 with 4 Axes>"
+  },
+  {
+    "cell": 33,
+    "output": 0,
+    "text": "<Figure size 2250x450 with 5 Axes>"
+  },
+  {
+    "cell": 38,
+    "output": 0,
+    "text": "'a photo of a cat'  vs  'a photo of a kitten': 0.9943\n'a photo of a cat'  vs  'a photo of a truck': 0.9859\n'a photo of a kitten'  vs  'a photo of a truck': 0.9810\n"
+  },
+  {
+    "cell": 40,
+    "output": 0,
+    "text": "<Figure size 2250x450 with 5 Axes>"
+  },
+  {
+    "cell": 44,
+    "output": 0,
+    "text": "Pipelines loaded with `dtype=torch.float16` cannot run with `cpu` device. It is not recommended to move them to `cpu` as running them will fail. Please make sure to use an accelerator to run the pipeline in inference, due to the lack of support for`float16` operations on this device in PyTorch. Please, remove the `torch_dtype=torch.float16` argument, or use another device for inference.\nPipelines loaded with `dtype=torch.float16` cannot run with `cpu` device. It is not recommended to move them to `cpu` as running them will fail. Please make sure to use an accelerator to run the pipeline in inference, due to the lack of support for`float16` operations on this device in PyTorch. Please, remove the `torch_dtype=torch.float16` argument, or use another device for inference.\nPipelines loaded with `dtype=torch.float16` cannot run with `cpu` device. It is not recommended to move them to `cpu` as running them will fail. Please make sure to use an accelerator to run the pipeline in inference, due to the lack of support for`float16` operations on this device in PyTorch. Please, remove the `torch_dtype=torch.float16` argument, or use another device for inference.\n"
+  },
+  {
+    "cell": 44,
+    "output": 1,
+    "text": "freed base model\n"
+  },
+  {
+    "cell": 46,
+    "output": 0,
+    "text": "model_index.json:   0%|          | 0.00/616 [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 46,
+    "output": 1,
+    "text": "Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 46,
+    "output": 2,
+    "text": "config.json:   0%|          | 0.00/617 [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 46,
+    "output": 3,
+    "text": "vocab.json: 0.00B [00:00, ?B/s]"
+  },
+  {
+    "cell": 46,
+    "output": 4,
+    "text": "tokenizer_config.json:   0%|          | 0.00/806 [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 46,
+    "output": 5,
+    "text": "special_tokens_map.json:   0%|          | 0.00/472 [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 46,
+    "output": 6,
+    "text": "merges.txt: 0.00B [00:00, ?B/s]"
+  },
+  {
+    "cell": 46,
+    "output": 7,
+    "text": "scheduler_config.json:   0%|          | 0.00/569 [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 46,
+    "output": 8,
+    "text": "preprocessor_config.json:   0%|          | 0.00/518 [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 46,
+    "output": 9,
+    "text": "model.safetensors:   0%|          | 0.00/492M [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 46,
+    "output": 10,
+    "text": "config.json: 0.00B [00:00, ?B/s]"
+  },
+  {
+    "cell": 46,
+    "output": 11,
+    "text": "config.json:   0%|          | 0.00/553 [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 46,
+    "output": 12,
+    "text": "diffusion_pytorch_model.safetensors:   0%|          | 0.00/3.44G [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 46,
+    "output": 13,
+    "text": "diffusion_pytorch_model.safetensors:   0%|          | 0.00/335M [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 46,
+    "output": 14,
+    "text": "Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 46,
+    "output": 15,
+    "text": "<Figure size 1800x450 with 4 Axes>"
+  },
+  {
+    "cell": 48,
+    "output": 0,
+    "text": "Pipelines loaded with `dtype=torch.float16` cannot run with `cpu` device. It is not recommended to move them to `cpu` as running them will fail. Please make sure to use an accelerator to run the pipeline in inference, due to the lack of support for`float16` operations on this device in PyTorch. Please, remove the `torch_dtype=torch.float16` argument, or use another device for inference.\nPipelines loaded with `dtype=torch.float16` cannot run with `cpu` device. It is not recommended to move them to `cpu` as running them will fail. Please make sure to use an accelerator to run the pipeline in inference, due to the lack of support for`float16` operations on this device in PyTorch. Please, remove the `torch_dtype=torch.float16` argument, or use another device for inference.\nPipelines loaded with `dtype=torch.float16` cannot run with `cpu` device. It is not recommended to move them to `cpu` as running them will fail. Please make sure to use an accelerator to run the pipeline in inference, due to the lack of support for`float16` operations on this device in PyTorch. Please, remove the `torch_dtype=torch.float16` argument, or use another device for inference.\n"
+  },
+  {
+    "cell": 48,
+    "output": 1,
+    "text": "model_index.json:   0%|          | 0.00/544 [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 48,
+    "output": 2,
+    "text": "Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 48,
+    "output": 3,
+    "text": "tokenizer_config.json:   0%|          | 0.00/829 [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 48,
+    "output": 4,
+    "text": "preprocessor_config.json:   0%|          | 0.00/342 [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 48,
+    "output": 5,
+    "text": "scheduler_config.json:   0%|          | 0.00/308 [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 48,
+    "output": 6,
+    "text": "merges.txt: 0.00B [00:00, ?B/s]"
+  },
+  {
+    "cell": 48,
+    "output": 7,
+    "text": "config.json:   0%|          | 0.00/638 [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 48,
+    "output": 8,
+    "text": "special_tokens_map.json:   0%|          | 0.00/460 [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 48,
+    "output": 9,
+    "text": "vocab.json: 0.00B [00:00, ?B/s]"
+  },
+  {
+    "cell": 48,
+    "output": 10,
+    "text": "model.safetensors:   0%|          | 0.00/1.36G [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 48,
+    "output": 11,
+    "text": "config.json:   0%|          | 0.00/914 [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 48,
+    "output": 12,
+    "text": "config.json:   0%|          | 0.00/616 [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 48,
+    "output": 13,
+    "text": "diffusion_pytorch_model.safetensors:   0%|          | 0.00/335M [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 48,
+    "output": 14,
+    "text": "diffusion_pytorch_model.safetensors:   0%|          | 0.00/3.46G [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 48,
+    "output": 15,
+    "text": "Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 48,
+    "output": 16,
+    "text": "inpaint U-Net in_channels: 9\n"
+  },
+  {
+    "cell": 49,
+    "output": 0,
+    "text": "<Figure size 1350x450 with 3 Axes>"
+  },
+  {
+    "cell": 53,
+    "output": 0,
+    "text": "<Figure size 900x450 with 2 Axes>"
+  }
+]
