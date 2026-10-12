@@ -1,0 +1,30 @@
+{
+  "01-numpy-neural-network": [
+    "Preserved continuous housing targets.",
+    "Made MSE shape-safe for singleton and multiple-output cases.",
+    "Stabilized sigmoid against overflow.",
+    "Missing utils modules remain external; no substitute solver or new housing experiment was supplied."
+  ],
+  "02-optimization-landscapes": [
+    "Computed objective from supplied parameters rather than global x/y.",
+    "Plot starting point, epochs and CPU assumptions still come from notebook globals."
+  ],
+  "03-synthetic-emoji-cnn": [
+    "Separated train/validation/test image-generation seed ranges.",
+    "Historical validation seeds overlap training seeds in the submitted version; revised metrics are unknown."
+  ],
+  "05-rnn-lstm-sentiment": [
+    "Replaced contiguous ordered splitting with seeded class-wise random splitting.",
+    "Vocabulary is still fitted before splitting, and official IMDb partitions are still combined; these limitations are NOT fixed.",
+    "Padding-aware recurrent state/length handling still requires a coherent redesign."
+  ],
+  "09-face-vae-analysis": [
+    "Removed unsupported no-severe-bias interpretation.",
+    "Corrected the learned-prior narrative to match stored posterior-bootstrap/GMM FID ordering.",
+    "Data/proxy labeling, metric protocol and run-order issues remain documented."
+  ],
+  "10-mnist-ddpm": [
+    "Corrected abstract timestep interface spelling (foward to forward).",
+    "No diffusion retraining, sample generation or MMD recomputation was performed."
+  ]
+}
