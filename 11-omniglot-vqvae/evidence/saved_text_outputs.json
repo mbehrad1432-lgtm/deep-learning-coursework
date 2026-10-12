@@ -1,0 +1,117 @@
+[
+  {
+    "cell": 2,
+    "output": 0,
+    "text": "Using device: cuda\nDataset size : 19280 images\nBatches/epoch: 151\n"
+  },
+  {
+    "cell": 2,
+    "output": 1,
+    "text": "<Figure size 1600x400 with 16 Axes>"
+  },
+  {
+    "cell": 2,
+    "output": 2,
+    "text": "Pixel stats: mean=0.842 (expected ~0.0), std=0.497 (expected ~0.5)\n"
+  },
+  {
+    "cell": 4,
+    "output": 0,
+    "text": "ResidualStack OK\n  Output shape:        torch.Size([4, 128, 16, 16])\n  Gradient norm:       273.8241  (must be > 0)\n"
+  },
+  {
+    "cell": 6,
+    "output": 0,
+    "text": "enc_b output z_b: torch.Size([2, 128, 16, 16])  (expected [2,128,16,16])\nenc_t output z_t: torch.Size([2, 128, 8, 8])  (expected [2,128, 8, 8])\ndec_b output    : torch.Size([2, 1, 64, 64])  (expected [2,  1,64,64])\n"
+  },
+  {
+    "cell": 8,
+    "output": 0,
+    "text": "=== VectorQuantizerEMA Sanity Checks ===\n[OK] Output shape matches input: torch.Size([4, 64, 8, 8])\n[OK] commitment_loss: 0.2308\n[OK] perplexity: 183.83  (range: 1 to 512)\n[OK] STE works: gradient norm at encoder = 128.0000\n[OK] EMA updates embeddings during training\n[OK] Embeddings are buffers, not trainable parameters\n"
+  },
+  {
+    "cell": 10,
+    "output": 0,
+    "text": "=== VQVAE2 Sanity Checks ===\n[OK] Reconstruction shape: torch.Size([4, 1, 64, 64])\n[OK] VQ loss:             0.4692\n[OK] Perplexity Top/Bot:  10.2 / 5.8\nModel parameters:  912,065  (trained by optimizer)\nCodebook buffers:  33,024  (updated by EMA only)\nBottom grid: 16x16 = 256 codes per image\nTop    grid: 8x8 = 64 codes per image\nTotal codes per image: 320\n"
+  },
+  {
+    "cell": 12,
+    "output": 0,
+    "text": "WARNING: Ignoring invalid distribution ~andas (c:\\Users\\psp\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages)\nWARNING: Ignoring invalid distribution ~andas (c:\\Users\\psp\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages)\nWARNING: Ignoring invalid distribution ~andas (c:\\Users\\psp\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages)\n"
+  },
+  {
+    "cell": 13,
+    "output": 0,
+    "text": "Codebooks initialized from real encoder outputs.\n Epoch   Recon_Loss   Perp_Top   Perp_Bot     SSIM\n-------------------------------------------------------\n     1       0.0521        3.1        5.5    0.893\n     2       0.0100        2.4        5.3    0.978\n     3       0.0061        2.4        6.2    0.986\n     4       0.0055        2.5        6.3    0.988\n     5       0.0051        2.5        6.3    0.989\n     6       0.0049        2.5        6.4    0.989\n     7       0.0046        2.5        6.4    0.989\n     8       0.0045        2.4        6.4    0.990\n     9       0.0044        2.5        6.4    0.990\n    10       0.0043        2.4        6.5    0.990\n    11       0.0042        2.5        6.5    0.990\n    12       0.0041        2.5        6.5    0.991\n    13       0.0039        2.5        6.6    0.991\n    14       0.0039        2.5        6.6    0.991\n    15       0.0038        2.5        6.6    0.991\n    16       0.0038        2.5        6.6    0.991\n    17       0.0038        2.5        6.6    0.991\n    18       0.0038        2.5        6.6    0.992\n    19       0.0037        2.5        6.6    0.992\n    20       0.0037        2.5        6.6    0.992\n"
+  },
+  {
+    "cell": 13,
+    "output": 1,
+    "text": "    Epoch  Recon_Loss   VQ_Loss  Perp_Top  Perp_Bot      SSIM\n0       1    0.052117  0.008717  3.148098  5.514111  0.893317\n1       2    0.010026  0.003577  2.430033  5.311552  0.978303\n2       3    0.006096  0.002278  2.409924  6.180815  0.986474\n3       4    0.005501  0.002151  2.458472  6.272135  0.987642\n4       5    0.005095  0.002104  2.481562  6.313181  0.988521\n5       6    0.004867  0.002059  2.490232  6.353367  0.988987\n6       7    0.004648  0.002016  2.472186  6.392456  0.989476\n7       8    0.004514  0.001999  2.408877  6.425686  0.989778\n8       9    0.004419  0.001979  2.472213  6.445112  0.989983\n9      10    0.004311  0.001959  2.440329  6.467153  0.990225\n10     11    0.004209  0.001937  2.467093  6.495770  0.990447\n11     12    0.004066  0.001879  2.488870  6.545397  0.990793\n12     13    0.003936  0.001816  2.493057  6.583965  0.991103\n13     14    0.003870  0.001782  2.500092  6.594444  0.991257\n14     15    0.003830  0.001764  2.498478  6.602405  0.991348\n15     16    0.003796  0.001757  2.501022  6.607280  0.991424\n16     17    0.003772  0.001746  2.505913  6.608050  0.991479\n17     18    0.003752  0.001745  2.504266  6.602144  0.991523\n18     19    0.003738  0.001743  2.499958  6.593166  0.991553\n19     20    0.003731  0.001743  2.486134  6.589767  0.991569"
+  },
+  {
+    "cell": 13,
+    "output": 2,
+    "text": "<Figure size 1800x400 with 4 Axes>"
+  },
+  {
+    "cell": 13,
+    "output": 3,
+    "text": "<Figure size 1600x400 with 16 Axes>"
+  },
+  {
+    "cell": 15,
+    "output": 0,
+    "text": "FID score: 10.12\nTarget:    < 50 on Omniglot reconstructions after 20 epochs\nFeature shapes: real=(2000, 2048), fake=(2000, 2048)\n"
+  },
+  {
+    "cell": 18,
+    "output": 0,
+    "text": "Mean absolute error per image:\n  Image 1: mean=0.0036  max=0.5524\n  Image 2: mean=0.0088  max=0.7616\n  Image 3: mean=0.0073  max=0.5988\n  Image 4: mean=0.0175  max=0.9350\n  Image 5: mean=0.0168  max=0.9759\n  Image 6: mean=0.0119  max=0.7922\n"
+  },
+  {
+    "cell": 18,
+    "output": 1,
+    "text": "<Figure size 900x1500 with 24 Axes>"
+  },
+  {
+    "cell": 20,
+    "output": 0,
+    "text": "SSIM comparison:\n  Full reconstruction:      0.9936\n  Top-only  (q_b = 0):      0.1600\n  Bottom-only (q_t = 0):    0.9591\n  Gap (Full - Top):         0.8336  <- Bottom level contribution\n"
+  },
+  {
+    "cell": 20,
+    "output": 1,
+    "text": "<Figure size 1200x1500 with 24 Axes>"
+  },
+  {
+    "cell": 23,
+    "output": 0,
+    "text": "=== Codebook Analysis: TOP level ===\n  Total assignments : 163,840\n  Dead codes (<1%)  : 124/128  (96.9%)\n  Perplexity        : 2.5 / 128  (1.9% utilisation)\n  Most used code    : #116 (49.47%)\n"
+  },
+  {
+    "cell": 23,
+    "output": 1,
+    "text": "<Figure size 1400x400 with 3 Axes>"
+  },
+  {
+    "cell": 23,
+    "output": 2,
+    "text": "=== Codebook Analysis: BOTTOM level ===\n  Total assignments : 655,360\n  Dead codes (<1%)  : 111/128  (86.7%)\n  Perplexity        : 6.6 / 128  (5.1% utilisation)\n  Most used code    : #126 (48.81%)\n"
+  },
+  {
+    "cell": 23,
+    "output": 3,
+    "text": "<Figure size 1400x400 with 3 Axes>"
+  },
+  {
+    "cell": 23,
+    "output": 4,
+    "text": "<Figure size 1200x750 with 40 Axes>"
+  },
+  {
+    "cell": 23,
+    "output": 5,
+    "text": "<Figure size 1200x750 with 40 Axes>"
+  }
+]

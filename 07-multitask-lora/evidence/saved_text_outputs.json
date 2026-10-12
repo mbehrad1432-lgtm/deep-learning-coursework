@@ -1,0 +1,472 @@
+[
+  {
+    "cell": 3,
+    "output": 0,
+    "text": "\u001b[2K     \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m79.5/79.5 kB\u001b[0m \u001b[31m3.2 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\n\u001b[2K     \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m52.8/52.8 kB\u001b[0m \u001b[31m3.6 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\n\u001b[2K   \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m10.8/10.8 MB\u001b[0m \u001b[31m76.9 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m:00:01\u001b[0m00:01\u001b[0m\n\u001b[2K   \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m680.7/680.7 kB\u001b[0m \u001b[31m41.6 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\n\u001b[2K   \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m60.7/60.7 MB\u001b[0m \u001b[31m29.2 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m:00:01\u001b[0m00:01\u001b[0m\n\u001b[2K   \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m383.7/383.7 kB\u001b[0m \u001b[31m24.7 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\n\u001b[2K   \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m529.0/529.0 kB\u001b[0m \u001b[31m33.9 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\n\u001b[2K   \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m10.9/10.9 MB\u001b[0m \u001b[31m107.6 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m00:01\u001b[0m0:01\u001b[0m\n\u001b[2K   \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m8.8/8.8 MB\u001b[0m \u001b[31m105.4 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m00:01\u001b[0m00:01\u001b[0m\n\u001b[2K   \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m668.2/668.2 kB\u001b[0m \u001b[31m40.5 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\n\u001b[2K   \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m4.5/4.5 MB\u001b[0m \u001b[31m108.0 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m00:01\u001b[0m\n\u001b[?25h\u001b[31mERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\nbigframes 2.35.0 requires google-cloud-bigquery-storage<3.0.0,>=2.30.0, which is not installed.\nydata-profiling 4.18.1 requires matplotlib<=3.10,>=3.5, but you have matplotlib 3.10.9 which is incompatible.\nydata-profiling 4.18.1 requires pandas!=1.4.0,<3.0,>1.5, but you have pandas 3.0.3 which is incompatible.\ngoogle-colab 1.0.0 requires jupyter-server==2.14.0, but you have jupyter-server 2.12.5 which is incompatible.\ngoogle-colab 1.0.0 requires pandas==2.2.2, but you have pandas 3.0.3 which is incompatible.\ndopamine-rl 4.1.2 requires gym<=0.25.2, but you have gym 0.26.2 which is incompatible.\ndb-dtypes 1.5.0 requires pandas<3.0.0,>=1.5.3, but you have pandas 3.0.3 which is incompatible.\nbqplot 0.12.45 requires pandas<3.0.0,>=1.0.0, but you have pandas 3.0.3 which is incompatible.\ncudf-cu12 26.2.1 requires pandas<2.4.0,>=2.0, but you have pandas 3.0.3 which is incompatible.\ndask-cudf-cu12 26.2.1 requires pandas<2.4.0,>=2.0, but you have pandas 3.0.3 which is incompatible.\ngradio 5.50.0 requires pandas<3.0,>=1.0, but you have pandas 3.0.3 which is incompatible.\u001b[0m\u001b[31m\n\u001b[0mNote: you may need to restart the kernel to use updated packages.\n"
+  },
+  {
+    "cell": 4,
+    "output": 0,
+    "text": "Visible CUDA devices: 1\nUsing GPU: Tesla T4\n"
+  },
+  {
+    "cell": 6,
+    "output": 0,
+    "text": "            task  train_examples  val_examples\n0          GSM8K             300           100\n1  CommonsenseQA             300           100\n2         AGNews             300           100"
+  },
+  {
+    "cell": 6,
+    "output": 1,
+    "text": "GSM8K example\n"
+  },
+  {
+    "cell": 6,
+    "output": 2,
+    "text": "   id                                           question  \\\n0   0  For every 12 cans you recycle, you receive $0....   \n1   1  Betty picked 16 strawberries. Matthew picked 2...   \n2   2  Jack has a stack of books that is 12 inches th...   \n\n                                              answer final_answer  \n0  There are 144/12 = 12 sets of 12 cans that the...           12  \n1  Matthew picked 16 + 20 = 36 strawberries. Nata...           40  \n2  There are 960 pages because 80 x 12 = 960 Each...          160  "
+  },
+  {
+    "cell": 6,
+    "output": 3,
+    "text": "CommonsenseQA example\n"
+  },
+  {
+    "cell": 6,
+    "output": 4,
+    "text": "   id                                           question question_concept  \\\n0   0  I needed to send a piece of mail, where did I go?             mail   \n1   1  Government, planned cities, workers, instituti...       government   \n2   2     Where is the best place to get furniture from?        furniture   \n\n                                             choices answerKey  \n0  {'label': ['A', 'B', 'C', 'D', 'E'], 'text': [...         B  \n1  {'label': ['A', 'B', 'C', 'D', 'E'], 'text': [...         B  \n2  {'label': ['A', 'B', 'C', 'D', 'E'], 'text': [...         B  "
+  },
+  {
+    "cell": 6,
+    "output": 5,
+    "text": "AG News example\n"
+  },
+  {
+    "cell": 6,
+    "output": 6,
+    "text": "   label                                     title  \\\n0      1         Policeman 'saw fatal train crash'   \n1      2                     Silver finale for USA   \n2      4  Compuware Blasts IBM #39;s Legal Tactics   \n\n                                         description  id  \n0  An off-duty policeman watched a train plough i...   0  \n1  In the last event of the 2004 Olympic Games, t...   1  \n2  Two years ago, IBM was ordered to produce the ...   2  "
+  },
+  {
+    "cell": 10,
+    "output": 0,
+    "text": "config.json:   0%|          | 0.00/659 [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 10,
+    "output": 1,
+    "text": "tokenizer_config.json:   0%|          | 0.00/7.30k [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 10,
+    "output": 2,
+    "text": "vocab.json:   0%|          | 0.00/2.78M [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 10,
+    "output": 3,
+    "text": "Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"
+  },
+  {
+    "cell": 10,
+    "output": 4,
+    "text": "merges.txt:   0%|          | 0.00/1.67M [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 10,
+    "output": 5,
+    "text": "tokenizer.json:   0%|          | 0.00/7.03M [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 10,
+    "output": 6,
+    "text": "Visible CUDA devices: 1\nPER_DEVICE_TRAIN_BATCH_SIZE: 3\nGRADIENT_ACCUMULATION_STEPS: 5\nEffective batch size: 15\nRequested specialized epochs: 4\nTraining examples per specialized task: 300\nMicro-batches per specialized epoch: 100\nOptimizer updates per specialized epoch: 20\nOptimizer updates per specialized adapter: 80\n"
+  },
+  {
+    "cell": 13,
+    "output": 0,
+    "text": "\n================================================================================\nTraining adapter: commonsenseqa_lora_r4\nTraining examples: 300\nTraining mode: epoch-based\nRequested epochs: 4\n"
+  },
+  {
+    "cell": 13,
+    "output": 1,
+    "text": "model.safetensors:   0%|          | 0.00/988M [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 13,
+    "output": 2,
+    "text": "Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 13,
+    "output": 3,
+    "text": "generation_config.json:   0%|          | 0.00/242 [00:00<?, ?B/s]"
+  },
+  {
+    "cell": 13,
+    "output": 4,
+    "text": "[transformers] warmup_ratio is deprecated and will be removed in v5.2. Use `warmup_steps` instead.\n"
+  },
+  {
+    "cell": 13,
+    "output": 5,
+    "text": "trainable params: 2,199,552 || all params: 496,232,320 || trainable%: 0.4433\n\nTrainer sanity check\nTrainer sees CUDA devices: 1\nTrainer per-device batch size: 3\nTrainer global train batch size: 3\nTrainer gradient accumulation: 5\nMicro-batches per epoch: 100\nOptimizer updates per epoch: 20\nTrainer max_steps: -1\nTrainer num_train_epochs: 4.0\n"
+  },
+  {
+    "cell": 13,
+    "output": 6,
+    "text": "<IPython.core.display.HTML object>"
+  },
+  {
+    "cell": 13,
+    "output": 7,
+    "text": "Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 13,
+    "output": 8,
+    "text": "eval CommonsenseQA:   0%|          | 0/25 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 13,
+    "output": 9,
+    "text": "\n================================================================================\nTraining adapter: commonsenseqa_lora_r16\nTraining examples: 300\nTraining mode: epoch-based\nRequested epochs: 4\n"
+  },
+  {
+    "cell": 13,
+    "output": 10,
+    "text": "Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 13,
+    "output": 11,
+    "text": "[transformers] warmup_ratio is deprecated and will be removed in v5.2. Use `warmup_steps` instead.\n"
+  },
+  {
+    "cell": 13,
+    "output": 12,
+    "text": "trainable params: 8,798,208 || all params: 502,830,976 || trainable%: 1.7497\n\nTrainer sanity check\nTrainer sees CUDA devices: 1\nTrainer per-device batch size: 3\nTrainer global train batch size: 3\nTrainer gradient accumulation: 5\nMicro-batches per epoch: 100\nOptimizer updates per epoch: 20\nTrainer max_steps: -1\nTrainer num_train_epochs: 4.0\n"
+  },
+  {
+    "cell": 13,
+    "output": 13,
+    "text": "<IPython.core.display.HTML object>"
+  },
+  {
+    "cell": 13,
+    "output": 14,
+    "text": "Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 13,
+    "output": 15,
+    "text": "eval CommonsenseQA:   0%|          | 0/25 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 13,
+    "output": 16,
+    "text": "\n================================================================================\nTraining adapter: commonsenseqa_lora_r64\nTraining examples: 300\nTraining mode: epoch-based\nRequested epochs: 4\n"
+  },
+  {
+    "cell": 13,
+    "output": 17,
+    "text": "Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 13,
+    "output": 18,
+    "text": "[transformers] warmup_ratio is deprecated and will be removed in v5.2. Use `warmup_steps` instead.\n"
+  },
+  {
+    "cell": 13,
+    "output": 19,
+    "text": "trainable params: 35,192,832 || all params: 529,225,600 || trainable%: 6.6499\n\nTrainer sanity check\nTrainer sees CUDA devices: 1\nTrainer per-device batch size: 3\nTrainer global train batch size: 3\nTrainer gradient accumulation: 5\nMicro-batches per epoch: 100\nOptimizer updates per epoch: 20\nTrainer max_steps: -1\nTrainer num_train_epochs: 4.0\n"
+  },
+  {
+    "cell": 13,
+    "output": 20,
+    "text": "<IPython.core.display.HTML object>"
+  },
+  {
+    "cell": 13,
+    "output": 21,
+    "text": "Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 13,
+    "output": 22,
+    "text": "eval CommonsenseQA:   0%|          | 0/25 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 13,
+    "output": 23,
+    "text": "   rank                 adapter  commonsenseqa_val_exact_match\n0     4   commonsenseqa_lora_r4                           0.59\n1    16  commonsenseqa_lora_r16                           0.62\n2    64  commonsenseqa_lora_r64                           0.53"
+  },
+  {
+    "cell": 13,
+    "output": 24,
+    "text": "<Figure size 500x300 with 1 Axes>"
+  },
+  {
+    "cell": 15,
+    "output": 0,
+    "text": "Chosen LoRA rank for the rest of the notebook: 16\n"
+  },
+  {
+    "cell": 17,
+    "output": 0,
+    "text": "            task  train_examples  val_examples\n0          GSM8K             300           100\n1  CommonsenseQA             300           100\n2         AGNews             300           100"
+  },
+  {
+    "cell": 17,
+    "output": 1,
+    "text": "\n================================================================================\nGSM8K\n"
+  },
+  {
+    "cell": 17,
+    "output": 2,
+    "text": "   id                                           question  \\\n0   0  For every 12 cans you recycle, you receive $0....   \n\n                                              answer final_answer  \n0  There are 144/12 = 12 sets of 12 cans that the...           12  "
+  },
+  {
+    "cell": 17,
+    "output": 3,
+    "text": "You are a careful math reasoner. Solve the problem step by step, then end with the final answer.\n\nProblem:\nFor every 12 cans you recycle, you receive $0.50, and for every 5 kilograms of newspapers, you receive $1.50. If your family collected 144 cans and 20 kilograms of newspapers, how much money would you receive?\n\nEnd your response with this exact format:\nAnswer: <number>\n\nResponse:\n\nTARGET: There are 144/12 = 12 sets of 12 cans that the family collected. So, the family would receive $0.50 x 12 = $6 for the cans. There are 20/5 = 4 sets of 5 kilograms of newspapers that the family collected. So, the family would receive $1.50 x 4 = $6 for the newspapers. Therefore, the family would receive a total of $6 + $6 = $12.\nAnswer: 12\n\n================================================================================\nCommonsenseQA\n"
+  },
+  {
+    "cell": 17,
+    "output": 4,
+    "text": "   id                                           question question_concept  \\\n0   0  I needed to send a piece of mail, where did I go?             mail   \n\n                                             choices answerKey  \n0  {'label': ['A', 'B', 'C', 'D', 'E'], 'text': [...         B  "
+  },
+  {
+    "cell": 17,
+    "output": 5,
+    "text": "Answer the multiple-choice commonsense question. Return only the option letter.\n\nQuestion:\nI needed to send a piece of mail, where did I go?\n\nChoices:\nA. table\nB. post office\nC. neighbor's house\nD. railway station\nE. fridge\n\nUse this exact format:\nAnswer: <letter>\n\nResponse:\n\nTARGET: Answer: B\n\n================================================================================\nAGNews\n"
+  },
+  {
+    "cell": 17,
+    "output": 6,
+    "text": "   label                              title  \\\n0      1  Policeman 'saw fatal train crash'   \n\n                                         description  id  \n0  An off-duty policeman watched a train plough i...   0  "
+  },
+  {
+    "cell": 17,
+    "output": 7,
+    "text": "Classify the news article into one of these topic categories: World, Sports, Business, or Sci/Tech. Return only the category name.\n\nTitle: Policeman 'saw fatal train crash'\nDescription: An off-duty policeman watched a train plough into a car on a level crossing  in Berkshire, killing six people.\n\nUse this exact format:\nAnswer: <category>\n\nResponse:\n\nTARGET: Answer: World\n"
+  },
+  {
+    "cell": 18,
+    "output": 0,
+    "text": "Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 18,
+    "output": 1,
+    "text": "\n================================================================================\nEvaluating base model on: GSM8K\n"
+  },
+  {
+    "cell": 18,
+    "output": 2,
+    "text": "eval GSM8K:   0%|          | 0/25 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 18,
+    "output": 3,
+    "text": "\n================================================================================\nEvaluating base model on: CommonsenseQA\n"
+  },
+  {
+    "cell": 18,
+    "output": 4,
+    "text": "eval CommonsenseQA:   0%|          | 0/25 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 18,
+    "output": 5,
+    "text": "\n================================================================================\nEvaluating base model on: AGNews\n"
+  },
+  {
+    "cell": 18,
+    "output": 6,
+    "text": "eval AGNews:   0%|          | 0/25 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 18,
+    "output": 7,
+    "text": "<pandas.io.formats.style.Styler at 0x7d743815bf50>"
+  },
+  {
+    "cell": 19,
+    "output": 0,
+    "text": "Using existing adapter: outputs/adapters/gsm8k_specialized_r16\nUsing existing adapter: outputs/adapters/agnews_specialized_r16\n"
+  },
+  {
+    "cell": 19,
+    "output": 1,
+    "text": "Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 19,
+    "output": 2,
+    "text": "eval GSM8K:   0%|          | 0/25 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 19,
+    "output": 3,
+    "text": "Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 19,
+    "output": 4,
+    "text": "eval CommonsenseQA:   0%|          | 0/25 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 19,
+    "output": 5,
+    "text": "Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 19,
+    "output": 6,
+    "text": "eval AGNews:   0%|          | 0/25 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 19,
+    "output": 7,
+    "text": "            task                    adapter  val_exact_match\n0          GSM8K          GSM8K specialized             0.30\n1  CommonsenseQA  CommonsenseQA specialized             0.62\n2         AGNews         AGNews specialized             0.86"
+  },
+  {
+    "cell": 22,
+    "output": 0,
+    "text": "                               run  training_examples training_mode    epochs  \\\n0          one specialized adapter                300   epoch-based  4.000000   \n1  general adapter, matched budget                900    step-based  1.333333   \n\n   optimizer_updates_used  \n0                      80  \n1                      80  "
+  },
+  {
+    "cell": 22,
+    "output": 1,
+    "text": "Mixed training examples: 900\n"
+  },
+  {
+    "cell": 22,
+    "output": 2,
+    "text": "               count\nGSM8K            300\nAGNews           300\nCommonsenseQA    300"
+  },
+  {
+    "cell": 22,
+    "output": 3,
+    "text": "Using existing adapter: outputs/adapters/general_matched_r16\n"
+  },
+  {
+    "cell": 25,
+    "output": 0,
+    "text": "\n================================================================================\nEvaluating adapter: GSM8K specialized\n"
+  },
+  {
+    "cell": 25,
+    "output": 1,
+    "text": "Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 25,
+    "output": 2,
+    "text": "eval GSM8K:   0%|          | 0/25 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 25,
+    "output": 3,
+    "text": "eval CommonsenseQA:   0%|          | 0/25 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 25,
+    "output": 4,
+    "text": "eval AGNews:   0%|          | 0/25 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 25,
+    "output": 5,
+    "text": "\n================================================================================\nEvaluating adapter: CommonsenseQA specialized\n"
+  },
+  {
+    "cell": 25,
+    "output": 6,
+    "text": "Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 25,
+    "output": 7,
+    "text": "eval GSM8K:   0%|          | 0/25 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 25,
+    "output": 8,
+    "text": "eval CommonsenseQA:   0%|          | 0/25 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 25,
+    "output": 9,
+    "text": "eval AGNews:   0%|          | 0/25 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 25,
+    "output": 10,
+    "text": "\n================================================================================\nEvaluating adapter: AG News specialized\n"
+  },
+  {
+    "cell": 25,
+    "output": 11,
+    "text": "Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 25,
+    "output": 12,
+    "text": "eval GSM8K:   0%|          | 0/25 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 25,
+    "output": 13,
+    "text": "eval CommonsenseQA:   0%|          | 0/25 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 25,
+    "output": 14,
+    "text": "eval AGNews:   0%|          | 0/25 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 25,
+    "output": 15,
+    "text": "\n================================================================================\nEvaluating adapter: General matched\n"
+  },
+  {
+    "cell": 25,
+    "output": 16,
+    "text": "Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 25,
+    "output": 17,
+    "text": "eval GSM8K:   0%|          | 0/25 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 25,
+    "output": 18,
+    "text": "eval CommonsenseQA:   0%|          | 0/25 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 25,
+    "output": 19,
+    "text": "eval AGNews:   0%|          | 0/25 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 25,
+    "output": 20,
+    "text": "<pandas.io.formats.style.Styler at 0x7d74389ae930>"
+  },
+  {
+    "cell": 25,
+    "output": 21,
+    "text": "<Figure size 1100x380 with 2 Axes>"
+  },
+  {
+    "cell": 27,
+    "output": 0,
+    "text": "<pandas.io.formats.style.Styler at 0x7d743814a420>"
+  },
+  {
+    "cell": 27,
+    "output": 1,
+    "text": "<pandas.io.formats.style.Styler at 0x7d743867b440>"
+  }
+]

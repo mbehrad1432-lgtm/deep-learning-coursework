@@ -1,0 +1,122 @@
+[
+  {
+    "cell": 3,
+    "output": 0,
+    "text": "WARNING: Ignoring invalid distribution ~andas (c:\\Users\\psp\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages)\nWARNING: Ignoring invalid distribution ~andas (c:\\Users\\psp\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages)\nWARNING: Ignoring invalid distribution ~andas (c:\\Users\\psp\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages)\nc:\\Users\\psp\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\tqdm\\auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html\n  from .autonotebook import tqdm as notebook_tqdm\n"
+  },
+  {
+    "cell": 3,
+    "output": 1,
+    "text": "PyTorch version: 2.7.1+cu118\nCUDA available: True\nGPU: NVIDIA GeForce GTX 1650\n"
+  },
+  {
+    "cell": 5,
+    "output": 0,
+    "text": "Raw rows: 1319\nRaw columns: ['question', 'answer']\nClean rows: 64\nSaved to: I:\\دانشگاه\\ترم 8\\Deep learning\\HW\\HW3\\Practicals\\Notebook2_inference techniques\\gsm8k_64_clean.json\n"
+  },
+  {
+    "cell": 5,
+    "output": 1,
+    "text": "                                            question final_answer\n0  Carol and Jennifer are sisters from Los Angele...           36\n1  A team of 4 painters worked on a mansion for 3...          189\n2  It costs $194 per meter to repave a street. Mo...        65960\n3  Richard lives in an apartment building with 15...           30\n4  An ice cream truck is traveling through a neig...           25"
+  },
+  {
+    "cell": 7,
+    "output": 0,
+    "text": "Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\nc:\\Users\\psp\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\huggingface_hub\\file_download.py:137: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\\Users\\psp\\.cache\\huggingface\\hub\\models--Qwen--Qwen3-0.6B. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.\nTo support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development\n  warnings.warn(message)\n[transformers] `torch_dtype` is deprecated! Use `dtype` instead!\nLoading weights: 100%|██████████| 311/311 [00:00<00:00, 550.41it/s]\n"
+  },
+  {
+    "cell": 7,
+    "output": 1,
+    "text": "Loaded: Qwen/Qwen3-0.6B\nModel device: cuda:0\n"
+  },
+  {
+    "cell": 9,
+    "output": 0,
+    "text": "Recommended BATCH_SIZE: 8\n{'text': '12 + 7 = 19', 'tokens': 10, 'latency': 1.9403254999779165}\n"
+  },
+  {
+    "cell": 11,
+    "output": 0,
+    "text": "12\n10\n1.5\n17\n"
+  },
+  {
+    "cell": 13,
+    "output": 0,
+    "text": "Direct /no_think: 100%|██████████| 8/8 [00:30<00:00,  3.87s/it]\n"
+  },
+  {
+    "cell": 13,
+    "output": 1,
+    "text": "{'method': 'Direct /no_think',\n 'accuracy': np.float64(0.046875),\n 'invalid_rate': np.float64(0.0625),\n 'avg_generated_tokens': np.float64(10.0),\n 'avg_latency_seconds': np.float64(0.48342200156275794)}"
+  },
+  {
+    "cell": 15,
+    "output": 0,
+    "text": "CoT /no_think: 100%|██████████| 8/8 [03:43<00:00, 27.88s/it]\n"
+  },
+  {
+    "cell": 15,
+    "output": 1,
+    "text": "{'method': 'CoT /no_think',\n 'accuracy': np.float64(0.484375),\n 'invalid_rate': np.float64(0.0),\n 'avg_generated_tokens': np.float64(213.625),\n 'avg_latency_seconds': np.float64(3.483793450000121)}"
+  },
+  {
+    "cell": 17,
+    "output": 0,
+    "text": "CoT /think: 100%|██████████| 8/8 [12:35<00:00, 94.42s/it]\n"
+  },
+  {
+    "cell": 17,
+    "output": 1,
+    "text": "{'method': 'CoT /think',\n 'accuracy': np.float64(0.390625),\n 'invalid_rate': np.float64(0.0),\n 'avg_generated_tokens': np.float64(512.0),\n 'avg_latency_seconds': np.float64(11.801211828125815)}"
+  },
+  {
+    "cell": 19,
+    "output": 0,
+    "text": "Self-consistency N=5: 100%|██████████| 8/8 [20:32<00:00, 154.12s/it]\n"
+  },
+  {
+    "cell": 19,
+    "output": 1,
+    "text": "{'method': 'Self-consistency N=5',\n 'accuracy': np.float64(0.53125),\n 'invalid_rate': np.float64(0.0),\n 'avg_generated_tokens': np.float64(973.5),\n 'avg_latency_seconds': np.float64(19.262605764060027)}"
+  },
+  {
+    "cell": 21,
+    "output": 0,
+    "text": "Few-shot k=1: 100%|██████████| 8/8 [06:35<00:00, 49.47s/it]\n"
+  },
+  {
+    "cell": 21,
+    "output": 1,
+    "text": "{'method': 'Few-shot k=1',\n 'accuracy': np.float64(0.359375),\n 'invalid_rate': np.float64(0.0),\n 'avg_generated_tokens': np.float64(215.625),\n 'avg_latency_seconds': np.float64(6.1832150578129585)}"
+  },
+  {
+    "cell": 23,
+    "output": 0,
+    "text": "Self-refinement: 100%|██████████| 8/8 [08:46<00:00, 65.77s/it]\n"
+  },
+  {
+    "cell": 23,
+    "output": 1,
+    "text": "{'method': 'Self-refinement',\n 'accuracy': np.float64(0.484375),\n 'invalid_rate': np.float64(0.0),\n 'avg_generated_tokens': np.float64(333.625),\n 'avg_latency_seconds': np.float64(8.219489242188502)}"
+  },
+  {
+    "cell": 25,
+    "output": 0,
+    "text": "                 method  accuracy  invalid_rate  avg_generated_tokens  \\\n0      Direct /no_think  0.046875        0.0625                10.000   \n1         CoT /no_think  0.484375        0.0000               213.625   \n2            CoT /think  0.390625        0.0000               512.000   \n3  Self-consistency N=5  0.531250        0.0000               973.500   \n4          Few-shot k=1  0.359375        0.0000               215.625   \n5       Self-refinement  0.484375        0.0000               333.625   \n\n   avg_latency_seconds  \n0             0.483422  \n1             3.483793  \n2            11.801212  \n3            19.262606  \n4             6.183215  \n5             8.219489  "
+  },
+  {
+    "cell": 27,
+    "output": 0,
+    "text": "<Figure size 900x600 with 1 Axes>"
+  },
+  {
+    "cell": 29,
+    "output": 0,
+    "text": "The best accuracy was achieved by Self-consistency N=5 with accuracy 0.531. The most token-efficient method was Direct /no_think, with approximately 0.00469 accuracy per generated token. Direct prompting was the cheapest baseline, using about 10.0 generated tokens per problem, but it gives the model little room to reason.\n\nComparing CoT /no_think and CoT /think, /think changed accuracy from 0.484 to 0.391, while average generated tokens changed from 213.6 to 512.0. Therefore, whether the extra reasoning budget was worth it depends on whether this accuracy gain was large enough to justify the higher token cost and latency.\n\nSelf-consistency reached accuracy 0.531, but it used about 973.5 tokens per problem because it samples five solutions. This usually increases latency substantially. Few-shot prompting reached accuracy 0.359; the single example may help by showing the desired reasoning and answer format, but it can also hurt when the example's structure distracts the model from a different type of problem.\n\nOne failure case came from Direct /no_think. The gold answer was 36, but the extracted prediction was 100. This is most likely an arithmetic or reasoning mistake unless the raw output shows that the correct answer was present but formatted ambiguously.\n"
+  },
+  {
+    "cell": 29,
+    "output": 1,
+    "text": "1276"
+  }
+]

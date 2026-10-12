@@ -1,0 +1,25 @@
+{
+  "folder": "11-omniglot-vqvae",
+  "title": "Hierarchical VQ-VAE-2 on Omniglot",
+  "source": "P3_VQVAE_completed.ipynb",
+  "source_sha256": "892bf65111cfc9c6264f432590a86e4aa611327da3aa65bca8b2620b58f316f7",
+  "code_cells": 11,
+  "saved_errors": [],
+  "nonempty_code_without_execution_count": [],
+  "imports": [
+    "from pytorch_msssim import ssim as compute_ssim",
+    "from scipy.linalg import sqrtm",
+    "from sklearn.manifold import TSNE",
+    "from torch.utils.data import DataLoader",
+    "from torchvision import datasets, transforms",
+    "import matplotlib.pyplot as plt",
+    "import numpy as np",
+    "import os",
+    "import pandas as pd",
+    "import torch",
+    "import torch.nn as nn",
+    "import torch.nn.functional as F",
+    "import torchvision.models as tv_models"
+  ],
+  "review_mode": "static; no cells executed"
+}

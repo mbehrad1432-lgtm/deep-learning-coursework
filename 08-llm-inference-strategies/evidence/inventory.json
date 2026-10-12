@@ -1,0 +1,30 @@
+{
+  "folder": "08-llm-inference-strategies",
+  "title": "LLM Inference Strategies on GSM8K",
+  "source": "inference_techniques_completed.ipynb",
+  "source_sha256": "597db45dadd08f7eb7ce2d6a804e178a0f6c9e08cfc205f3c14f4139b887650a",
+  "code_cells": 15,
+  "saved_errors": [],
+  "nonempty_code_without_execution_count": [
+    29,
+    30
+  ],
+  "imports": [
+    "from IPython.display import display",
+    "from collections import Counter",
+    "from decimal import Decimal, InvalidOperation",
+    "from pathlib import Path",
+    "from tqdm.auto import tqdm",
+    "from transformers import AutoTokenizer, AutoModelForCausalLM",
+    "import json",
+    "import matplotlib.pyplot as plt",
+    "import numpy as np",
+    "import pandas as pd",
+    "import random",
+    "import re",
+    "import time",
+    "import torch",
+    "import zipfile"
+  ],
+  "review_mode": "static; no cells executed"
+}

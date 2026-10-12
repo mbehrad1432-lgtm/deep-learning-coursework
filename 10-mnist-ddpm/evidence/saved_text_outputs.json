@@ -1,0 +1,147 @@
+[
+  {
+    "cell": 40,
+    "output": 0,
+    "text": "<>:25: SyntaxWarning: invalid escape sequence '\\e'\n<>:25: SyntaxWarning: invalid escape sequence '\\e'\nC:\\Users\\psp\\AppData\\Local\\Temp\\ipykernel_24384\\1866336213.py:25: SyntaxWarning: invalid escape sequence '\\e'\n  \"\"\"\n"
+  },
+  {
+    "cell": 46,
+    "output": 0,
+    "text": "Epoch 1/5: 100%|██████████| 469/469 [16:17<00:00,  2.08s/it, loss=0.0685]\n"
+  },
+  {
+    "cell": 46,
+    "output": 1,
+    "text": "Epoch 1/5 - average loss: 0.103355\n"
+  },
+  {
+    "cell": 46,
+    "output": 2,
+    "text": "Epoch 2/5: 100%|██████████| 469/469 [16:08<00:00,  2.06s/it, loss=0.0523]\n"
+  },
+  {
+    "cell": 46,
+    "output": 3,
+    "text": "Epoch 2/5 - average loss: 0.064657\n"
+  },
+  {
+    "cell": 46,
+    "output": 4,
+    "text": "Epoch 3/5: 100%|██████████| 469/469 [16:14<00:00,  2.08s/it, loss=0.0502]\n"
+  },
+  {
+    "cell": 46,
+    "output": 5,
+    "text": "Epoch 3/5 - average loss: 0.059827\n"
+  },
+  {
+    "cell": 46,
+    "output": 6,
+    "text": "Epoch 4/5: 100%|██████████| 469/469 [16:16<00:00,  2.08s/it, loss=0.0592]\n"
+  },
+  {
+    "cell": 46,
+    "output": 7,
+    "text": "Epoch 4/5 - average loss: 0.057498\n"
+  },
+  {
+    "cell": 46,
+    "output": 8,
+    "text": "Epoch 5/5: 100%|██████████| 469/469 [16:31<00:00,  2.11s/it, loss=0.055] "
+  },
+  {
+    "cell": 46,
+    "output": 9,
+    "text": "Epoch 5/5 - average loss: 0.056120\n"
+  },
+  {
+    "cell": 46,
+    "output": 10,
+    "text": "\n"
+  },
+  {
+    "cell": 49,
+    "output": 0,
+    "text": "Sampling: 100%|██████████| 100/100 [00:43<00:00,  2.32it/s]\n"
+  },
+  {
+    "cell": 49,
+    "output": 1,
+    "text": "<Figure size 1000x1000 with 100 Axes>"
+  },
+  {
+    "cell": 68,
+    "output": 0,
+    "text": "<>:24: SyntaxWarning: invalid escape sequence '\\e'\n<>:79: SyntaxWarning: invalid escape sequence '\\e'\n<>:24: SyntaxWarning: invalid escape sequence '\\e'\n<>:79: SyntaxWarning: invalid escape sequence '\\e'\nC:\\Users\\psp\\AppData\\Local\\Temp\\ipykernel_24384\\3537206840.py:24: SyntaxWarning: invalid escape sequence '\\e'\n  \"\"\"\nC:\\Users\\psp\\AppData\\Local\\Temp\\ipykernel_24384\\3537206840.py:79: SyntaxWarning: invalid escape sequence '\\e'\n  \"\"\"\n"
+  },
+  {
+    "cell": 74,
+    "output": 0,
+    "text": "Conditional epoch 1/5: 100%|██████████| 469/469 [19:54<00:00,  2.55s/it, loss=0.0699]\n"
+  },
+  {
+    "cell": 74,
+    "output": 1,
+    "text": "Conditional epoch 1/5 - average loss: 0.099992\n"
+  },
+  {
+    "cell": 74,
+    "output": 2,
+    "text": "Conditional epoch 2/5: 100%|██████████| 469/469 [19:56<00:00,  2.55s/it, loss=0.0655]\n"
+  },
+  {
+    "cell": 74,
+    "output": 3,
+    "text": "Conditional epoch 2/5 - average loss: 0.063643\n"
+  },
+  {
+    "cell": 74,
+    "output": 4,
+    "text": "Conditional epoch 3/5: 100%|██████████| 469/469 [19:08<00:00,  2.45s/it, loss=0.0566]\n"
+  },
+  {
+    "cell": 74,
+    "output": 5,
+    "text": "Conditional epoch 3/5 - average loss: 0.059291\n"
+  },
+  {
+    "cell": 74,
+    "output": 6,
+    "text": "Conditional epoch 4/5: 100%|██████████| 469/469 [19:08<00:00,  2.45s/it, loss=0.0619]\n"
+  },
+  {
+    "cell": 74,
+    "output": 7,
+    "text": "Conditional epoch 4/5 - average loss: 0.057046\n"
+  },
+  {
+    "cell": 74,
+    "output": 8,
+    "text": "Conditional epoch 5/5: 100%|██████████| 469/469 [19:24<00:00,  2.48s/it, loss=0.0551]\n"
+  },
+  {
+    "cell": 74,
+    "output": 9,
+    "text": "Conditional epoch 5/5 - average loss: 0.056513\n"
+  },
+  {
+    "cell": 78,
+    "output": 0,
+    "text": "Conditional sampling: 100%|██████████| 100/100 [01:23<00:00,  1.19it/s]\n"
+  },
+  {
+    "cell": 78,
+    "output": 1,
+    "text": "<Figure size 1000x1000 with 100 Axes>"
+  },
+  {
+    "cell": 82,
+    "output": 0,
+    "text": "Conditional sampling: 100%|██████████| 100/100 [07:08<00:00,  4.29s/it]\n"
+  },
+  {
+    "cell": 82,
+    "output": 1,
+    "text": "Evaluated model: Conditional DDPM with classifier-free guidance\nNumber of real samples: 256\nNumber of generated samples: 256\nRBF bandwidth sigma: 12.4739\nRBF-MMD^2: 0.133162\nLower MMD is better. Values closer to zero mean the generated distribution is closer to real MNIST.\n"
+  }
+]

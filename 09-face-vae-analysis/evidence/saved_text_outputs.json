@@ -1,0 +1,1017 @@
+[
+  {
+    "cell": 1,
+    "output": 0,
+    "text": "All packages ready.\n"
+  },
+  {
+    "cell": 2,
+    "output": 0,
+    "text": "Device: cuda\n"
+  },
+  {
+    "cell": 4,
+    "output": 0,
+    "text": "  [ARCH] IMG=64 N=4 POOL=4 BASE=64 MAX=256 LAT=64\n         USE_RESBLOCK=True USE_SELF_ATTN=False\n✓ Config\n"
+  },
+  {
+    "cell": 6,
+    "output": 0,
+    "text": "Auto-detected existing CelebA-HQ images: /kaggle/working/data/celeba_dialog/image (30000 images)\nUsing CelebA-HQ image directory: /kaggle/working/data/celeba_dialog/image (30000 images)\n  ✓ fine_grained_labels.txt ready: data/celeba_dialog/fine_grained_labels.txt (0.59 MB)\n  ✓ binary_labels.txt ready: data/celeba_dialog/binary_labels.txt (3.62 MB)\n\nUsing CelebA-HQ: True\nHQ_IMAGES_DIR: /kaggle/working/data/celeba_dialog/image\nGDRIVE_FOLDER_LOCAL_DIR: None\n"
+  },
+  {
+    "cell": 7,
+    "output": 0,
+    "text": "Loading train split…\n  ⚠️ 1/30000 labels in fine_grained_labels.txt used order/zero fallback. Check filename alignment.\n  ✓ HQ split=train: 15000 images | fg_source=real\nLoading test split…\n  ⚠️ 1/30000 labels in fine_grained_labels.txt used order/zero fallback. Check filename alignment.\n  ✓ HQ split=test: 3000 images | fg_source=real\n\nTrain: 15000 images | fg_source=real\nTest:  3000 images | fg_source=real\nnum_workers=0, pin_memory=True\n\nOne batch shape: torch.Size([128, 3, 64, 64])\n"
+  },
+  {
+    "cell": 9,
+    "output": 0,
+    "text": "<Figure size 1200x400 with 1 Axes>"
+  },
+  {
+    "cell": 9,
+    "output": 1,
+    "text": "\nTop-10 most common binary attributes:\n  No_Beard                        83.8%\n  Young                           78.9%\n  Wearing_Lipstick                60.9%\n  Attractive                      57.4%\n  Heavy_Makeup                    48.8%\n  Mouth_Slightly_Open             47.4%\n  High_Cheekbones                 47.0%\n  Smiling                         46.8%\n  Arched_Eyebrows                 40.0%\n  Big_Lips                        39.9%\n"
+  },
+  {
+    "cell": 11,
+    "output": 0,
+    "text": "<Figure size 1800x500 with 1 Axes>"
+  },
+  {
+    "cell": 12,
+    "output": 0,
+    "text": "<Figure size 1200x1000 with 2 Axes>"
+  },
+  {
+    "cell": 12,
+    "output": 1,
+    "text": "Strongest correlations:\n  No_Beard                  ↔ Wearing_Lipstick           r=0.55\n  No_Beard                  ↔ Heavy_Makeup               r=0.43\n  No_Beard                  ↔ Arched_Eyebrows            r=0.29\n  No_Beard                  ↔ Big_Nose                   r=-0.33\n  No_Beard                  ↔ Male                       r=-0.65\n  No_Beard                  ↔ Wearing_Earrings           r=0.27\n  No_Beard                  ↔ Bags_Under_Eyes            r=-0.26\n  Young                     ↔ Wearing_Lipstick           r=0.31\n  Young                     ↔ Attractive                 r=0.41\n  Young                     ↔ Heavy_Makeup               r=0.29\n  Young                     ↔ Big_Nose                   r=-0.32\n  Young                     ↔ Male                       r=-0.35\n  Young                     ↔ Bags_Under_Eyes            r=-0.30\n  Wearing_Lipstick          ↔ Attractive                 r=0.44\n  Wearing_Lipstick          ↔ Heavy_Makeup               r=0.75\n  Wearing_Lipstick          ↔ High_Cheekbones            r=0.31\n  Wearing_Lipstick          ↔ Arched_Eyebrows            r=0.48\n  Wearing_Lipstick          ↔ Wavy_Hair                  r=0.32\n  Wearing_Lipstick          ↔ Big_Nose                   r=-0.39\n  Wearing_Lipstick          ↔ Male                       r=-0.83\n  Wearing_Lipstick          ↔ Wearing_Earrings           r=0.40\n  Wearing_Lipstick          ↔ Bags_Under_Eyes            r=-0.41\n  Wearing_Lipstick          ↔ Wearing_Necklace           r=0.29\n  Attractive                ↔ Heavy_Makeup               r=0.44\n  Attractive                ↔ Arched_Eyebrows            r=0.25\n  Attractive                ↔ Big_Nose                   r=-0.33\n  Attractive                ↔ Male                       r=-0.40\n  Heavy_Makeup              ↔ High_Cheekbones            r=0.28\n  Heavy_Makeup              ↔ Arched_Eyebrows            r=0.49\n  Heavy_Makeup              ↔ Wavy_Hair                  r=0.27\n  Heavy_Makeup              ↔ Big_Nose                   r=-0.34\n  Heavy_Makeup              ↔ Male                       r=-0.66\n  Heavy_Makeup              ↔ Wearing_Earrings           r=0.39\n  Heavy_Makeup              ↔ Bags_Under_Eyes            r=-0.40\n  Mouth_Slightly_Open       ↔ High_Cheekbones            r=0.46\n  Mouth_Slightly_Open       ↔ Smiling                    r=0.57\n  High_Cheekbones           ↔ Smiling                    r=0.74\n  High_Cheekbones           ↔ Male                       r=-0.27\n  High_Cheekbones           ↔ Wearing_Earrings           r=0.32\n  Smiling                   ↔ Wearing_Earrings           r=0.25\n  Arched_Eyebrows           ↔ Male                       r=-0.45\n  Arched_Eyebrows           ↔ Wearing_Earrings           r=0.35\n  Wavy_Hair                 ↔ Male                       r=-0.30\n  Wavy_Hair                 ↔ Straight_Hair              r=-0.36\n  Big_Nose                  ↔ Male                       r=0.46\n  Big_Nose                  ↔ Bags_Under_Eyes            r=0.41\n  Male                      ↔ Wearing_Earrings           r=-0.41\n  Male                      ↔ Bags_Under_Eyes            r=0.44\n  Male                      ↔ Wearing_Necklace           r=-0.30\n  Brown_Hair                ↔ Black_Hair                 r=-0.27\n"
+  },
+  {
+    "cell": 13,
+    "output": 0,
+    "text": "<Figure size 1600x300 with 5 Axes>"
+  },
+  {
+    "cell": 14,
+    "output": 0,
+    "text": "<Figure size 1800x250 with 12 Axes>"
+  },
+  {
+    "cell": 14,
+    "output": 1,
+    "text": "Fine-grained vs Binary disagreement rate: 17.3%\nIf this is high (>20%), the fine-grained labels may be unreliable for this attribute.\n"
+  },
+  {
+    "cell": 26,
+    "output": 0,
+    "text": "Core VAE parameters: 5,074,691\n  BASE_CHANNELS=64, LATENT_DIM=64, epochs=30, core_inpainting=False\n\n"
+  },
+  {
+    "cell": 26,
+    "output": 1,
+    "text": "[core] Epoch 001/30:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 26,
+    "output": 2,
+    "text": "[core] Epoch 001  loss=0.1245  mse=0.1245  kl=378.04  kl/pix=0.0308  kl/dim=5.907  AU=64/64  β=0.000  skip=0\n"
+  },
+  {
+    "cell": 26,
+    "output": 3,
+    "text": "[core] Epoch 002/30:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 26,
+    "output": 4,
+    "text": "[core] Epoch 002  loss=0.0726  mse=0.0693  kl=190.76  kl/pix=0.0155  kl/dim=2.981  AU=64/64  β=0.214  skip=0\n"
+  },
+  {
+    "cell": 26,
+    "output": 5,
+    "text": "[core] Epoch 003/30:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 26,
+    "output": 6,
+    "text": "[core] Epoch 003  loss=0.0612  mse=0.0563  kl=140.48  kl/pix=0.0114  kl/dim=2.195  AU=64/64  β=0.429  skip=0\n"
+  },
+  {
+    "cell": 26,
+    "output": 7,
+    "text": "[core] Epoch 004/30:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 26,
+    "output": 8,
+    "text": "[core] Epoch 004  loss=0.0570  mse=0.0504  kl=127.29  kl/pix=0.0104  kl/dim=1.989  AU=64/64  β=0.643  skip=0\n"
+  },
+  {
+    "cell": 26,
+    "output": 9,
+    "text": "[core] Epoch 005/30:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 26,
+    "output": 10,
+    "text": "[core] Epoch 005  loss=0.0554  mse=0.0471  kl=118.48  kl/pix=0.0096  kl/dim=1.851  AU=64/64  β=0.857  skip=0\n"
+  },
+  {
+    "cell": 26,
+    "output": 11,
+    "text": "[core] Epoch 006/30:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 26,
+    "output": 12,
+    "text": "[core] Epoch 006  loss=0.0545  mse=0.0448  kl=111.82  kl/pix=0.0091  kl/dim=1.747  AU=64/64  β=1.071  skip=0\n"
+  },
+  {
+    "cell": 26,
+    "output": 13,
+    "text": "[core] Epoch 007/30:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 26,
+    "output": 14,
+    "text": "[core] Epoch 007  loss=0.0543  mse=0.0433  kl=106.00  kl/pix=0.0086  kl/dim=1.656  AU=64/64  β=1.286  skip=0\n"
+  },
+  {
+    "cell": 26,
+    "output": 15,
+    "text": "[core] Epoch 008/30:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 26,
+    "output": 16,
+    "text": "[core] Epoch 008  loss=0.0548  mse=0.0425  kl=100.82  kl/pix=0.0082  kl/dim=1.575  AU=64/64  β=1.500  skip=0\n"
+  },
+  {
+    "cell": 26,
+    "output": 17,
+    "text": "[core] Epoch 009/30:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 26,
+    "output": 18,
+    "text": "[core] Epoch 009  loss=0.0554  mse=0.0419  kl=96.30  kl/pix=0.0078  kl/dim=1.505  AU=64/64  β=1.714  skip=0\n"
+  },
+  {
+    "cell": 26,
+    "output": 19,
+    "text": "[core] Epoch 010/30:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 26,
+    "output": 20,
+    "text": "[core] Epoch 010  loss=0.0557  mse=0.0413  kl=91.92  kl/pix=0.0075  kl/dim=1.436  AU=64/64  β=1.929  skip=0\n"
+  },
+  {
+    "cell": 26,
+    "output": 21,
+    "text": "[core] Epoch 011/30:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 26,
+    "output": 22,
+    "text": "[core] Epoch 011  loss=0.0566  mse=0.0412  kl=88.23  kl/pix=0.0072  kl/dim=1.379  AU=64/64  β=2.143  skip=0\n"
+  },
+  {
+    "cell": 26,
+    "output": 23,
+    "text": "[core] Epoch 012/30:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 26,
+    "output": 24,
+    "text": "[core] Epoch 012  loss=0.0570  mse=0.0408  kl=84.79  kl/pix=0.0069  kl/dim=1.325  AU=64/64  β=2.357  skip=0\n"
+  },
+  {
+    "cell": 26,
+    "output": 25,
+    "text": "[core] Epoch 013/30:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 26,
+    "output": 26,
+    "text": "[core] Epoch 013  loss=0.0578  mse=0.0408  kl=81.35  kl/pix=0.0066  kl/dim=1.271  AU=64/64  β=2.571  skip=0\n"
+  },
+  {
+    "cell": 26,
+    "output": 27,
+    "text": "[core] Epoch 014/30:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 26,
+    "output": 28,
+    "text": "[core] Epoch 014  loss=0.0584  mse=0.0406  kl=78.36  kl/pix=0.0064  kl/dim=1.224  AU=64/64  β=2.786  skip=0\n"
+  },
+  {
+    "cell": 26,
+    "output": 29,
+    "text": "[core] Epoch 015/30:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 26,
+    "output": 30,
+    "text": "[core] Epoch 015  loss=0.0591  mse=0.0407  kl=75.42  kl/pix=0.0061  kl/dim=1.178  AU=64/64  β=3.000  skip=0\n"
+  },
+  {
+    "cell": 26,
+    "output": 31,
+    "text": "[core] Epoch 016/30:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 26,
+    "output": 32,
+    "text": "[core] Epoch 016  loss=0.0586  mse=0.0403  kl=75.04  kl/pix=0.0061  kl/dim=1.172  AU=64/64  β=3.000  skip=0\n"
+  },
+  {
+    "cell": 26,
+    "output": 33,
+    "text": "[core] Epoch 017/30:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 26,
+    "output": 34,
+    "text": "[core] Epoch 017  loss=0.0580  mse=0.0399  kl=74.42  kl/pix=0.0061  kl/dim=1.163  AU=64/64  β=3.000  skip=0\n"
+  },
+  {
+    "cell": 26,
+    "output": 35,
+    "text": "[core] Epoch 018/30:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 26,
+    "output": 36,
+    "text": "[core] Epoch 018  loss=0.0575  mse=0.0394  kl=74.15  kl/pix=0.0060  kl/dim=1.159  AU=64/64  β=3.000  skip=0\n"
+  },
+  {
+    "cell": 26,
+    "output": 37,
+    "text": "[core] Epoch 019/30:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 26,
+    "output": 38,
+    "text": "[core] Epoch 019  loss=0.0569  mse=0.0389  kl=73.67  kl/pix=0.0060  kl/dim=1.151  AU=64/64  β=3.000  skip=0\n"
+  },
+  {
+    "cell": 26,
+    "output": 39,
+    "text": "[core] Epoch 020/30:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 26,
+    "output": 40,
+    "text": "[core] Epoch 020  loss=0.0566  mse=0.0386  kl=73.60  kl/pix=0.0060  kl/dim=1.150  AU=64/64  β=3.000  skip=0\n"
+  },
+  {
+    "cell": 26,
+    "output": 41,
+    "text": "[core] Epoch 021/30:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 26,
+    "output": 42,
+    "text": "[core] Epoch 021  loss=0.0562  mse=0.0383  kl=73.35  kl/pix=0.0060  kl/dim=1.146  AU=64/64  β=3.000  skip=0\n"
+  },
+  {
+    "cell": 26,
+    "output": 43,
+    "text": "[core] Epoch 022/30:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 26,
+    "output": 44,
+    "text": "[core] Epoch 022  loss=0.0558  mse=0.0379  kl=73.24  kl/pix=0.0060  kl/dim=1.144  AU=64/64  β=3.000  skip=0\n"
+  },
+  {
+    "cell": 26,
+    "output": 45,
+    "text": "[core] Epoch 023/30:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 26,
+    "output": 46,
+    "text": "[core] Epoch 023  loss=0.0555  mse=0.0376  kl=73.04  kl/pix=0.0059  kl/dim=1.141  AU=64/64  β=3.000  skip=0\n"
+  },
+  {
+    "cell": 26,
+    "output": 47,
+    "text": "[core] Epoch 024/30:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 26,
+    "output": 48,
+    "text": "[core] Epoch 024  loss=0.0553  mse=0.0374  kl=73.10  kl/pix=0.0059  kl/dim=1.142  AU=64/64  β=3.000  skip=0\n"
+  },
+  {
+    "cell": 26,
+    "output": 49,
+    "text": "[core] Epoch 025/30:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 26,
+    "output": 50,
+    "text": "[core] Epoch 025  loss=0.0550  mse=0.0372  kl=72.97  kl/pix=0.0059  kl/dim=1.140  AU=64/64  β=3.000  skip=0\n"
+  },
+  {
+    "cell": 26,
+    "output": 51,
+    "text": "[core] Epoch 026/30:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 26,
+    "output": 52,
+    "text": "[core] Epoch 026  loss=0.0548  mse=0.0370  kl=72.83  kl/pix=0.0059  kl/dim=1.138  AU=64/64  β=3.000  skip=0\n"
+  },
+  {
+    "cell": 26,
+    "output": 53,
+    "text": "[core] Epoch 027/30:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 26,
+    "output": 54,
+    "text": "[core] Epoch 027  loss=0.0547  mse=0.0369  kl=72.87  kl/pix=0.0059  kl/dim=1.139  AU=64/64  β=3.000  skip=0\n"
+  },
+  {
+    "cell": 26,
+    "output": 55,
+    "text": "[core] Epoch 028/30:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 26,
+    "output": 56,
+    "text": "[core] Epoch 028  loss=0.0546  mse=0.0368  kl=72.89  kl/pix=0.0059  kl/dim=1.139  AU=64/64  β=3.000  skip=0\n"
+  },
+  {
+    "cell": 26,
+    "output": 57,
+    "text": "[core] Epoch 029/30:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 26,
+    "output": 58,
+    "text": "[core] Epoch 029  loss=0.0545  mse=0.0367  kl=72.87  kl/pix=0.0059  kl/dim=1.139  AU=64/64  β=3.000  skip=0\n"
+  },
+  {
+    "cell": 26,
+    "output": 59,
+    "text": "[core] Epoch 030/30:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 26,
+    "output": 60,
+    "text": "[core] Epoch 030  loss=0.0545  mse=0.0367  kl=72.74  kl/pix=0.0059  kl/dim=1.137  AU=64/64  β=3.000  skip=0\nSaved → checkpoints/vae_core.pt\n  [plot_history] saved → checkpoints/history_Core_VAE_Training.png\n"
+  },
+  {
+    "cell": 26,
+    "output": 61,
+    "text": "<Figure size 2500x400 with 5 Axes>"
+  },
+  {
+    "cell": 26,
+    "output": 62,
+    "text": "\n✓ Core VAE saved to checkpoints/vae_core.pt\n"
+  },
+  {
+    "cell": 29,
+    "output": 0,
+    "text": "<Figure size 1280x400 with 1 Axes>"
+  },
+  {
+    "cell": 30,
+    "output": 0,
+    "text": "Active Units (KL > 0.01): 64 / 64 (100.0%)\n"
+  },
+  {
+    "cell": 30,
+    "output": 1,
+    "text": "<Figure size 1200x400 with 1 Axes>"
+  },
+  {
+    "cell": 31,
+    "output": 0,
+    "text": "Loaded healthy Core VAE → starting inpainting fine-tuning\nInpainting modes: ['scattered', 'eyes', 'mouth', 'center']\nVisible weight=0.1, hole weight=1.0\n"
+  },
+  {
+    "cell": 31,
+    "output": 1,
+    "text": "[inpaint] Epoch 001/8:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 31,
+    "output": 2,
+    "text": "[inpaint] Epoch 001  loss=0.0904  mse=0.0907  kl=197.34  kl/pix=0.0161  kl/dim=3.083  AU=64/64  β=0.000  skip=0\n"
+  },
+  {
+    "cell": 31,
+    "output": 3,
+    "text": "[inpaint] Epoch 002/8:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 31,
+    "output": 4,
+    "text": "[inpaint] Epoch 002  loss=0.0716  mse=0.0666  kl=128.49  kl/pix=0.0105  kl/dim=2.008  AU=64/64  β=0.500  skip=0\n"
+  },
+  {
+    "cell": 31,
+    "output": 5,
+    "text": "[inpaint] Epoch 003/8:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 31,
+    "output": 6,
+    "text": "[inpaint] Epoch 003  loss=0.0670  mse=0.0594  kl=94.94  kl/pix=0.0077  kl/dim=1.483  AU=64/64  β=1.000  skip=0\n"
+  },
+  {
+    "cell": 31,
+    "output": 7,
+    "text": "[inpaint] Epoch 004/8:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 31,
+    "output": 8,
+    "text": "[inpaint] Epoch 004  loss=0.0664  mse=0.0565  kl=82.18  kl/pix=0.0067  kl/dim=1.284  AU=64/64  β=1.500  skip=0\n"
+  },
+  {
+    "cell": 31,
+    "output": 9,
+    "text": "[inpaint] Epoch 005/8:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 31,
+    "output": 10,
+    "text": "[inpaint] Epoch 005  loss=0.0639  mse=0.0541  kl=81.21  kl/pix=0.0066  kl/dim=1.269  AU=64/64  β=1.500  skip=0\n"
+  },
+  {
+    "cell": 31,
+    "output": 11,
+    "text": "[inpaint] Epoch 006/8:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 31,
+    "output": 12,
+    "text": "[inpaint] Epoch 006  loss=0.0613  mse=0.0516  kl=81.08  kl/pix=0.0066  kl/dim=1.267  AU=64/64  β=1.500  skip=0\n"
+  },
+  {
+    "cell": 31,
+    "output": 13,
+    "text": "[inpaint] Epoch 007/8:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 31,
+    "output": 14,
+    "text": "[inpaint] Epoch 007  loss=0.0581  mse=0.0484  kl=80.76  kl/pix=0.0066  kl/dim=1.262  AU=64/64  β=1.500  skip=0\n"
+  },
+  {
+    "cell": 31,
+    "output": 15,
+    "text": "[inpaint] Epoch 008/8:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 31,
+    "output": 16,
+    "text": "[inpaint] Epoch 008  loss=0.0575  mse=0.0477  kl=80.89  kl/pix=0.0066  kl/dim=1.264  AU=64/64  β=1.500  skip=0\nSaved → checkpoints/vae_inpaint.pt\n  [plot_history] saved → checkpoints/history_Inpainting_VAE_Fine-Tuning.png\n"
+  },
+  {
+    "cell": 31,
+    "output": 17,
+    "text": "<Figure size 2500x400 with 5 Axes>"
+  },
+  {
+    "cell": 34,
+    "output": 0,
+    "text": "<Figure size 1600x850 with 4 Axes>"
+  },
+  {
+    "cell": 35,
+    "output": 0,
+    "text": "Encoding:   0%|          | 0/24 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 35,
+    "output": 1,
+    "text": "Encoded 3000 test images → latent shape torch.Size([3000, 64])\n"
+  },
+  {
+    "cell": 36,
+    "output": 0,
+    "text": "<Figure size 1400x400 with 2 Axes>"
+  },
+  {
+    "cell": 36,
+    "output": 1,
+    "text": "Active Units: 64/64  (100.0%)\n"
+  },
+  {
+    "cell": 37,
+    "output": 0,
+    "text": "<Figure size 1500x1000 with 12 Axes>"
+  },
+  {
+    "cell": 38,
+    "output": 0,
+    "text": "<Figure size 1440x220 with 8 Axes>"
+  },
+  {
+    "cell": 40,
+    "output": 0,
+    "text": "Latent distribution diagnostic\n  active units      : 64/64\n  total KL          : 72.99 nats/sample\n  KL per dim        : 1.140\n  mean ||mu||       : 7.33\n  N(0,I) shell norm : 8.00\n  mean std(mu_dim)  : 0.91\n  mean posterior σ  : 0.35\n⚠ High rate: reconstruction latent is informative, but prior samples may fall into holes. Train β=2/4 variants or reduce LATENT_DIM.\n"
+  },
+  {
+    "cell": 40,
+    "output": 1,
+    "text": "<Figure size 1280x400 with 1 Axes>"
+  },
+  {
+    "cell": 40,
+    "output": 2,
+    "text": "<Figure size 1280x400 with 1 Axes>"
+  },
+  {
+    "cell": 40,
+    "output": 3,
+    "text": "<Figure size 1600x600 with 24 Axes>"
+  },
+  {
+    "cell": 40,
+    "output": 4,
+    "text": "<Figure size 1600x600 with 24 Axes>"
+  },
+  {
+    "cell": 43,
+    "output": 0,
+    "text": "<Figure size 900x900 with 9 Axes>"
+  },
+  {
+    "cell": 44,
+    "output": 0,
+    "text": "<Figure size 1000x400 with 2 Axes>"
+  },
+  {
+    "cell": 44,
+    "output": 1,
+    "text": "Dimensions needed for 90% variance: 48 / 64\n"
+  },
+  {
+    "cell": 48,
+    "output": 0,
+    "text": "Collecting latents for learned prior:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 48,
+    "output": 1,
+    "text": "Learned latent prior fitted ✓\n  base model          : Core VAE\n  GMM components      : 32\n  PCA dim             : 32\n  PCA explained var   : 0.722\n"
+  },
+  {
+    "cell": 48,
+    "output": 2,
+    "text": "<Figure size 1600x780 with 3 Axes>"
+  },
+  {
+    "cell": 48,
+    "output": 3,
+    "text": "Final generation source for FID/grid: gmm_prior\n"
+  },
+  {
+    "cell": 52,
+    "output": 0,
+    "text": "U-Net Skip VAE parameters: 5,247,619\n"
+  },
+  {
+    "cell": 52,
+    "output": 1,
+    "text": "[unet_skip] Epoch 001/4:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 52,
+    "output": 2,
+    "text": "[unet_skip] Epoch 001  loss=0.0263  mse=0.0263  kl=1072.32  kl/pix=0.0873  kl/dim=16.755  AU=64/64  β=0.000  skip=0\n"
+  },
+  {
+    "cell": 52,
+    "output": 3,
+    "text": "[unet_skip] Epoch 002/4:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 52,
+    "output": 4,
+    "text": "[unet_skip] Epoch 002  loss=0.0086  mse=0.0077  kl=49.66  kl/pix=0.0040  kl/dim=0.776  AU=62/64  β=0.214  skip=0\n"
+  },
+  {
+    "cell": 52,
+    "output": 5,
+    "text": "[unet_skip] Epoch 003/4:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 52,
+    "output": 6,
+    "text": "[unet_skip] Epoch 003  loss=0.0076  mse=0.0064  kl=32.03  kl/pix=0.0026  kl/dim=0.500  AU=62/64  β=0.429  skip=0\n"
+  },
+  {
+    "cell": 52,
+    "output": 7,
+    "text": "[unet_skip] Epoch 004/4:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 52,
+    "output": 8,
+    "text": "[unet_skip] Epoch 004  loss=0.0075  mse=0.0059  kl=32.00  kl/pix=0.0026  kl/dim=0.500  AU=64/64  β=0.643  skip=0\nSaved → checkpoints/vae_unet_skip.pt\nLatent Skip VAE parameters: 5,104,707\n"
+  },
+  {
+    "cell": 52,
+    "output": 9,
+    "text": "[lat_skip] Epoch 001/20:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 52,
+    "output": 10,
+    "text": "[lat_skip] Epoch 001  loss=0.1260  mse=0.1260  kl=301.45  kl/pix=0.0245  kl/dim=4.710  AU=64/64  β=0.000  skip=0\n"
+  },
+  {
+    "cell": 52,
+    "output": 11,
+    "text": "[lat_skip] Epoch 002/20:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 52,
+    "output": 12,
+    "text": "[lat_skip] Epoch 002  loss=0.0700  mse=0.0668  kl=182.53  kl/pix=0.0149  kl/dim=2.852  AU=64/64  β=0.214  skip=0\n"
+  },
+  {
+    "cell": 52,
+    "output": 13,
+    "text": "[lat_skip] Epoch 003/20:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 52,
+    "output": 14,
+    "text": "[lat_skip] Epoch 003  loss=0.0599  mse=0.0548  kl=147.34  kl/pix=0.0120  kl/dim=2.302  AU=64/64  β=0.429  skip=0\n"
+  },
+  {
+    "cell": 52,
+    "output": 15,
+    "text": "[lat_skip] Epoch 004/20:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 52,
+    "output": 16,
+    "text": "[lat_skip] Epoch 004  loss=0.0566  mse=0.0496  kl=132.89  kl/pix=0.0108  kl/dim=2.076  AU=64/64  β=0.643  skip=0\n"
+  },
+  {
+    "cell": 52,
+    "output": 17,
+    "text": "[lat_skip] Epoch 005/20:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 52,
+    "output": 18,
+    "text": "[lat_skip] Epoch 005  loss=0.0549  mse=0.0462  kl=123.91  kl/pix=0.0101  kl/dim=1.936  AU=64/64  β=0.857  skip=0\n"
+  },
+  {
+    "cell": 52,
+    "output": 19,
+    "text": "[lat_skip] Epoch 006/20:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 52,
+    "output": 20,
+    "text": "[lat_skip] Epoch 006  loss=0.0543  mse=0.0441  kl=115.94  kl/pix=0.0094  kl/dim=1.812  AU=64/64  β=1.071  skip=0\n"
+  },
+  {
+    "cell": 52,
+    "output": 21,
+    "text": "[lat_skip] Epoch 007/20:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 52,
+    "output": 22,
+    "text": "[lat_skip] Epoch 007  loss=0.0543  mse=0.0428  kl=109.90  kl/pix=0.0089  kl/dim=1.717  AU=64/64  β=1.286  skip=0\n"
+  },
+  {
+    "cell": 52,
+    "output": 23,
+    "text": "[lat_skip] Epoch 008/20:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 52,
+    "output": 24,
+    "text": "[lat_skip] Epoch 008  loss=0.0548  mse=0.0420  kl=104.50  kl/pix=0.0085  kl/dim=1.633  AU=64/64  β=1.500  skip=0\n"
+  },
+  {
+    "cell": 52,
+    "output": 25,
+    "text": "[lat_skip] Epoch 009/20:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 52,
+    "output": 26,
+    "text": "[lat_skip] Epoch 009  loss=0.0553  mse=0.0414  kl=99.68  kl/pix=0.0081  kl/dim=1.558  AU=64/64  β=1.714  skip=0\n"
+  },
+  {
+    "cell": 52,
+    "output": 27,
+    "text": "[lat_skip] Epoch 010/20:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 52,
+    "output": 28,
+    "text": "[lat_skip] Epoch 010  loss=0.0557  mse=0.0407  kl=95.41  kl/pix=0.0078  kl/dim=1.491  AU=64/64  β=1.929  skip=0\n"
+  },
+  {
+    "cell": 52,
+    "output": 29,
+    "text": "[lat_skip] Epoch 011/20:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 52,
+    "output": 30,
+    "text": "[lat_skip] Epoch 011  loss=0.0564  mse=0.0404  kl=91.50  kl/pix=0.0074  kl/dim=1.430  AU=64/64  β=2.143  skip=0\n"
+  },
+  {
+    "cell": 52,
+    "output": 31,
+    "text": "[lat_skip] Epoch 012/20:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 52,
+    "output": 32,
+    "text": "[lat_skip] Epoch 012  loss=0.0573  mse=0.0404  kl=88.15  kl/pix=0.0072  kl/dim=1.377  AU=64/64  β=2.357  skip=0\n"
+  },
+  {
+    "cell": 52,
+    "output": 33,
+    "text": "[lat_skip] Epoch 013/20:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 52,
+    "output": 34,
+    "text": "[lat_skip] Epoch 013  loss=0.0580  mse=0.0402  kl=85.13  kl/pix=0.0069  kl/dim=1.330  AU=64/64  β=2.571  skip=0\n"
+  },
+  {
+    "cell": 52,
+    "output": 35,
+    "text": "[lat_skip] Epoch 014/20:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 52,
+    "output": 36,
+    "text": "[lat_skip] Epoch 014  loss=0.0588  mse=0.0401  kl=82.39  kl/pix=0.0067  kl/dim=1.287  AU=64/64  β=2.786  skip=0\n"
+  },
+  {
+    "cell": 52,
+    "output": 37,
+    "text": "[lat_skip] Epoch 015/20:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 52,
+    "output": 38,
+    "text": "[lat_skip] Epoch 015  loss=0.0598  mse=0.0404  kl=79.73  kl/pix=0.0065  kl/dim=1.246  AU=64/64  β=3.000  skip=0\n"
+  },
+  {
+    "cell": 52,
+    "output": 39,
+    "text": "[lat_skip] Epoch 016/20:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 52,
+    "output": 40,
+    "text": "[lat_skip] Epoch 016  loss=0.0593  mse=0.0399  kl=79.50  kl/pix=0.0065  kl/dim=1.242  AU=64/64  β=3.000  skip=0\n"
+  },
+  {
+    "cell": 52,
+    "output": 41,
+    "text": "[lat_skip] Epoch 017/20:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 52,
+    "output": 42,
+    "text": "[lat_skip] Epoch 017  loss=0.0588  mse=0.0395  kl=79.21  kl/pix=0.0064  kl/dim=1.238  AU=64/64  β=3.000  skip=0\n"
+  },
+  {
+    "cell": 52,
+    "output": 43,
+    "text": "[lat_skip] Epoch 018/20:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 52,
+    "output": 44,
+    "text": "[lat_skip] Epoch 018  loss=0.0586  mse=0.0393  kl=79.21  kl/pix=0.0064  kl/dim=1.238  AU=64/64  β=3.000  skip=0\n"
+  },
+  {
+    "cell": 52,
+    "output": 45,
+    "text": "[lat_skip] Epoch 019/20:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 52,
+    "output": 46,
+    "text": "[lat_skip] Epoch 019  loss=0.0584  mse=0.0390  kl=79.17  kl/pix=0.0064  kl/dim=1.237  AU=64/64  β=3.000  skip=0\n"
+  },
+  {
+    "cell": 52,
+    "output": 47,
+    "text": "[lat_skip] Epoch 020/20:   0%|          | 0/117 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 52,
+    "output": 48,
+    "text": "[lat_skip] Epoch 020  loss=0.0583  mse=0.0390  kl=79.03  kl/pix=0.0064  kl/dim=1.235  AU=64/64  β=3.000  skip=0\nSaved → checkpoints/vae_lat_skip.pt\n\n=== The Skip Paradox Demo ===\nGenerated 4 images from each model using z ~ N(0,I).\n  Core VAE:     normal baseline.\n  U-Net Skip:   may degrade when sampling because generation has no encoder skips.\n  Latent Skip:  should remain sampleable because z is injected at decoder layers.\n"
+  },
+  {
+    "cell": 56,
+    "output": 0,
+    "text": "<Figure size 1100x1020 with 30 Axes>"
+  },
+  {
+    "cell": 58,
+    "output": 0,
+    "text": "Encoding:   0%|          | 0/24 [00:00<?, ?it/s]"
+  },
+  {
+    "cell": 58,
+    "output": 1,
+    "text": "Encoded test set: μ torch.Size([3000, 64]), attrs torch.Size([3000, 40])\n"
+  },
+  {
+    "cell": 65,
+    "output": 0,
+    "text": "<Figure size 1920x400 with 1 Axes>"
+  },
+  {
+    "cell": 65,
+    "output": 1,
+    "text": "<Figure size 1920x400 with 1 Axes>"
+  },
+  {
+    "cell": 65,
+    "output": 2,
+    "text": "<Figure size 1920x400 with 1 Axes>"
+  },
+  {
+    "cell": 65,
+    "output": 3,
+    "text": "<Figure size 1920x400 with 1 Axes>"
+  },
+  {
+    "cell": 65,
+    "output": 4,
+    "text": "<Figure size 1920x400 with 1 Axes>"
+  },
+  {
+    "cell": 67,
+    "output": 0,
+    "text": "Computing quantitative reconstruction metrics on test set...\n  Per-pixel MSE  : 0.03325\n  PSNR (dB)      : 20.81    (>= 20 dB is decent, >= 25 dB is good)\n  SSIM           : 0.5583    (1.0 = identical, >= 0.7 is good)\n"
+  },
+  {
+    "cell": 68,
+    "output": 0,
+    "text": "Computing per-attribute reconstruction MSE on test set...\n"
+  },
+  {
+    "cell": 68,
+    "output": 1,
+    "text": "<Figure size 1600x500 with 2 Axes>"
+  },
+  {
+    "cell": 68,
+    "output": 2,
+    "text": "\n10/40 attributes show >10% reconstruction parity gap.\n  -> This is acceptable: no severe bias detected.\n"
+  },
+  {
+    "cell": 69,
+    "output": 0,
+    "text": "<Figure size 1600x600 with 3 Axes>"
+  },
+  {
+    "cell": 69,
+    "output": 1,
+    "text": "\nDisentanglement summary:\n  mean max|r| per attribute : 0.165\n  # dims with max|r| > 0.10 : 53/64\n  # attrs with max|r| > 0.10 : 34/40\n  Top-10 most disentangled attributes:\n    Blond_Hair                 r=+0.314  (z8)\n    Bangs                      r=-0.296  (z5)\n    Male                       r=+0.287  (z5)\n    Black_Hair                 r=-0.272  (z8)\n    Wearing_Lipstick           r=-0.254  (z60)\n    No_Beard                   r=-0.245  (z5)\n    Heavy_Makeup               r=-0.238  (z60)\n    Attractive                 r=+0.221  (z9)\n    Wearing_Hat                r=+0.193  (z44)\n    Pale_Skin                  r=+0.192  (z9)\n"
+  },
+  {
+    "cell": 70,
+    "output": 0,
+    "text": "<Figure size 1400x800 with 28 Axes>"
+  },
+  {
+    "cell": 70,
+    "output": 1,
+    "text": "If the latent space is semantic:\n  Smiling row:    α=-3 neutral  →  α=+3 smiling\n  Male row:       α=-3 feminine →  α=+3 masculine\n  Eyeglasses row: α=-3 no glasses → α=+3 with glasses\n  Old row:        α=-3 young → α=+3 old\n"
+  },
+  {
+    "cell": 71,
+    "output": 0,
+    "text": "<Figure size 1600x800 with 32 Axes>"
+  },
+  {
+    "cell": 71,
+    "output": 1,
+    "text": "\nAttribute distribution in WORST-10% reconstructions vs overall:\n  Attribute                  overall  fail-10%        Δ\n  + Male                       42.1%     51.7%    +9.5pp\n  + Wearing_Hat                 3.8%     12.0%    +8.2pp\n  + Eyeglasses                  6.0%     10.7%    +4.6pp\n  + Pale_Skin                   5.4%      9.7%    +4.3pp\n  + Sideburns                   8.8%     13.0%    +4.2pp\n  + Big_Nose                   28.6%     32.3%    +3.7pp\n  + Chubby                      6.3%     10.0%    +3.7pp\n  + Mustache                    5.4%      8.7%    +3.3pp\n  - Attractive                 60.2%     42.7%   -17.6pp\n  - High_Cheekbones            45.3%     32.0%   -13.3pp\n  - Wearing_Lipstick           52.2%     40.0%   -12.2pp\n  - Heavy_Makeup               44.2%     33.0%   -11.2pp\n  - Smiling                    46.2%     35.7%   -10.5pp\n  - Wavy_Hair                  34.6%     24.3%   -10.3pp\n  - Pointy_Nose                28.9%     19.3%    -9.6pp\n  - Brown_Hair                 23.4%     14.0%    -9.4pp\n\n  + = over-represented in failures (model is BAD at this group)\n  - = under-represented in failures (model is GOOD at this group)\n"
+  },
+  {
+    "cell": 74,
+    "output": 0,
+    "text": "Comprehensive VAE comparison:\n             Params      PSNR      SSIM       MSE   KL_nats  AU  FID\nModel                                                               \nCore        5074691    20.808     0.558     0.033    73.035  64  NaN\nU-Net Skip  5247619    22.769     0.720     0.021   805.521  64  NaN\n\n"
+  },
+  {
+    "cell": 74,
+    "output": 1,
+    "text": "<Figure size 1000x170 with 1 Axes>"
+  },
+  {
+    "cell": 74,
+    "output": 2,
+    "text": "\nRank-based recommendation (lower combined rank = better):\n                 PSNR      SSIM       MSE  AU  FID\nModel                                             \nU-Net Skip  22.769213  0.720385  0.021178  64  NaN\nCore        20.807670  0.558321  0.033247  64  NaN\n"
+  },
+  {
+    "cell": 81,
+    "output": 0,
+    "text": "Running t-SNE…\nRunning UMAP…\n"
+  },
+  {
+    "cell": 81,
+    "output": 1,
+    "text": "<Figure size 2400x500 with 8 Axes>"
+  },
+  {
+    "cell": 82,
+    "output": 0,
+    "text": "<Figure size 1200x400 with 2 Axes>"
+  },
+  {
+    "cell": 82,
+    "output": 1,
+    "text": "90% variance captured by 48 components  (out of 64 latent dims)\n"
+  },
+  {
+    "cell": 85,
+    "output": 0,
+    "text": "Downloading: \"https://download.pytorch.org/models/inception_v3_google-0cc3c7bd.pth\" to /root/.cache/torch/hub/checkpoints/inception_v3_google-0cc3c7bd.pth\n"
+  },
+  {
+    "cell": 85,
+    "output": 1,
+    "text": "100%|██████████| 104M/104M [00:00<00:00, 186MB/s]  \n"
+  },
+  {
+    "cell": 85,
+    "output": 2,
+    "text": "InceptionV3 feature extractor loaded ✓\n"
+  },
+  {
+    "cell": 86,
+    "output": 0,
+    "text": "Extracting InceptionV3 features for 500 real images…\nGenerating from Core VAE standard prior…\nExtracting features for generated images: Core / standard N(0,I)…\n  FID (Core / standard N(0,I)): 170.29\nGenerating from posterior_bootstrap…\nExtracting features for generated images: Selected model / posterior bootstrap…\n  FID (Selected model / posterior bootstrap): 134.86\nGenerating from gmm_prior…\nExtracting features for generated images: Selected model / learned GMM prior…\n  FID (Selected model / learned GMM prior): 156.67\n\nFID summary:\n  Selected model / posterior bootstrap    :   134.86  ← selected\n  Selected model / learned GMM prior      :   156.67\n  Core / standard N(0,I)                  :   170.29\n\nSelected generator for final report: Selected model / posterior bootstrap\n"
+  },
+  {
+    "cell": 89,
+    "output": 0,
+    "text": "Diversity (real images):      0.2972\nDiversity (generated images): 0.2166\nDiversity ratio:              0.7290  (1.0 = as diverse as real data)\n"
+  },
+  {
+    "cell": 90,
+    "output": 0,
+    "text": "<Figure size 900x450 with 1 Axes>"
+  },
+  {
+    "cell": 90,
+    "output": 1,
+    "text": "\nInterpretation:\n- Core / standard N(0,I): strict vanilla prior test; may be visually weak.\n- β-VAE / standard N(0,I): stronger prior regularization; often improves vanilla prior samples.\n- Learned GMM prior: post-hoc learned latent prior; usually best end-to-end generation because it samples the learned aggregate posterior manifold.\n"
+  },
+  {
+    "cell": 91,
+    "output": 0,
+    "text": "<Figure size 1280x400 with 1 Axes>"
+  },
+  {
+    "cell": 91,
+    "output": 1,
+    "text": "<Figure size 1600x800 with 3 Axes>"
+  },
+  {
+    "cell": 91,
+    "output": 2,
+    "text": "Prompt-VAE was not trained in this run; skipped conditional generation grid.\nShowing final inpainting examples from vae_ivae_lat_skipnpaint…\n"
+  },
+  {
+    "cell": 91,
+    "output": 3,
+    "text": "<Figure size 1600x850 with 4 Axes>"
+  },
+  {
+    "cell": 91,
+    "output": 4,
+    "text": "<Figure size 1600x850 with 4 Axes>"
+  },
+  {
+    "cell": 91,
+    "output": 5,
+    "text": "<Figure size 1600x850 with 4 Axes>"
+  }
+]

@@ -1,0 +1,9 @@
+# Dependency inventory; NOT a tested lockfile.
+torch
+torchvision
+numpy
+matplotlib
+Pillow
+requests
+tqdm
+jupyterlab

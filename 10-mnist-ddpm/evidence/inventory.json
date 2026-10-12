@@ -1,0 +1,25 @@
+{
+  "folder": "10-mnist-ddpm",
+  "title": "MNIST DDPM and Classifier-Free Guidance",
+  "source": "P2_DDPM_completed.ipynb",
+  "source_sha256": "7dfc14ee0cdd8fcd49d4ba266a6ccd968218c2630e76c096295536548ae3116c",
+  "code_cells": 29,
+  "saved_errors": [],
+  "nonempty_code_without_execution_count": [],
+  "imports": [
+    "from PIL import Image",
+    "from abc import abstractmethod",
+    "from torchvision import datasets, transforms",
+    "from tqdm import tqdm",
+    "import math",
+    "import matplotlib.pyplot as plt",
+    "import numpy as np",
+    "import os",
+    "import requests",
+    "import time",
+    "import torch",
+    "import torch.nn as nn",
+    "import torch.nn.functional as F"
+  ],
+  "review_mode": "static; no cells executed"
+}
